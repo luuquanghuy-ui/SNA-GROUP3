@@ -1,0 +1,31 @@
+{
+  "scope": "Independent calculation from delivered E3 node and edge CSV; does not reconstruct edges from normalized tweet records.",
+  "computed": {
+    "n_nodes": 224685,
+    "n_edges": 1905386,
+    "n_active_nodes": 84819,
+    "n_isolates": 139866,
+    "density": 7.548605667187969e-05,
+    "n_components": 141752,
+    "largest_component_nodes": 79404,
+    "n_communities": 2101,
+    "largest_community_nodes": 17482,
+    "modularity": 0.6540762661863374,
+    "total_edge_weight": 5029994,
+    "degree_mismatches": 0,
+    "strength_mismatches": 0
+  },
+  "matches_reported": {
+    "n_nodes": true,
+    "n_edges": true,
+    "n_active_nodes": true,
+    "n_isolates": true,
+    "density": true,
+    "n_components": true,
+    "largest_component_nodes": true,
+    "n_communities": true,
+    "largest_community_nodes": true,
+    "modularity": true
+  },
+  "all_checks_pass": true
+}

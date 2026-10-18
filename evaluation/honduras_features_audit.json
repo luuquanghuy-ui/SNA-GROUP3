@@ -1,0 +1,41 @@
+{
+  "audit_runtime": {
+    "python": "3.11.9",
+    "platform": "Windows-10-10.0.26340-SP0"
+  },
+  "source_files": {
+    "features": "D:\\mxhui\\nguoi 1\\honduras_features.csv",
+    "features_sha256": "011c2c50fad29bffe2642f4701d45f2602c86edf50eead64ba887292a1e0cbd9",
+    "quality_summary": "D:\\mxhui\\nguoi 1\\data_quality_summary.csv",
+    "quality_summary_sha256": "534e18e755fa06caca5bc5a6638c964ae97c82574752ebd86fb386be884dcb7a",
+    "processed_account_splits": "D:\\mxhui\\nguoi0\\processed-20261018T032211Z-1-001\\processed\\honduras_account_splits.csv",
+    "processed_account_splits_sha256": "8f2cea8189746dc8c9d258addd95cbabdf68d59b239bc83b6057e05df77b2e83"
+  },
+  "rows": 224685,
+  "unique_account_ids": 224685,
+  "bad_accounts_label_0": 1866,
+  "good_accounts_label_1": 222819,
+  "split_by_label": {
+    "train_0": 1306,
+    "train_1": 155973,
+    "validation_0": 187,
+    "validation_1": 22281,
+    "test_0": 373,
+    "test_1": 44565
+  },
+  "duplicate_account_ids": 0,
+  "duplicate_split_account_ids": 0,
+  "missing_values": {},
+  "invalid_rows": {},
+  "checks": {
+    "row_count_matches_summary": true,
+    "bad_count_matches_summary": true,
+    "good_count_matches_summary": true,
+    "account_ids_unique": true,
+    "no_missing_values": true,
+    "valid_feature_values": true,
+    "matches_processed_account_splits": true
+  },
+  "all_checks_pass": true,
+  "scope": "Kiểm tra bảng feature bàn giao với manifest split trong nguoi0; không chạy lại phần trích xuất feature từ JSONL gốc."
+}
