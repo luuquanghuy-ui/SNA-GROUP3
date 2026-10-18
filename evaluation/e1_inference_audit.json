@@ -1,0 +1,25 @@
+{
+  "scope": "Independent inference on Fox8 test accounts from raw NDJSON using delivered TF-IDF vectorizer and model checkpoints; training was not rerun.",
+  "python": "3.11.9",
+  "numpy": "1.26.4",
+  "scikit_learn": "1.8.0",
+  "torch": "2.11.0+cpu",
+  "test_accounts": 456,
+  "models": {
+    "LogisticRegression": {
+      "n_accounts": 456,
+      "prediction_agreement_fraction": 1.0,
+      "max_absolute_probability_difference": 2.0284256496694297e-09
+    },
+    "RandomForest": {
+      "n_accounts": 456,
+      "prediction_agreement_fraction": 1.0,
+      "max_absolute_probability_difference": 0.0
+    },
+    "MLP": {
+      "n_accounts": 456,
+      "prediction_agreement_fraction": 1.0,
+      "max_absolute_probability_difference": 1.1920928955078125e-07
+    }
+  }
+}

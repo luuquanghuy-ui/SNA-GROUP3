@@ -1,0 +1,45 @@
+{
+  "scope": "Independent local rerun of E2 notebook's StandardScaler, DummyClassifier and LogisticRegression on Person 1 feature table; not a fresh virtual environment.",
+  "python": "3.11.9",
+  "pandas": "2.2.3",
+  "numpy": "1.26.4",
+  "scikit_learn": "1.8.0",
+  "features": [
+    "tweet_count",
+    "avg_text_length",
+    "url_ratio",
+    "hashtag_ratio",
+    "mention_ratio",
+    "retweet_ratio"
+  ],
+  "results": {
+    "DummyClassifier": {
+      "validation": {
+        "n_accounts": 22468,
+        "prediction_agreement_fraction": 1.0,
+        "max_absolute_probability_difference": 6.071532165918825e-17,
+        "all_predictions_match": true
+      },
+      "test": {
+        "n_accounts": 44938,
+        "prediction_agreement_fraction": 1.0,
+        "max_absolute_probability_difference": 6.071532165918825e-17,
+        "all_predictions_match": true
+      }
+    },
+    "LogisticRegression": {
+      "validation": {
+        "n_accounts": 22468,
+        "prediction_agreement_fraction": 1.0,
+        "max_absolute_probability_difference": 5.750955267558311e-13,
+        "all_predictions_match": true
+      },
+      "test": {
+        "n_accounts": 44938,
+        "prediction_agreement_fraction": 1.0,
+        "max_absolute_probability_difference": 4.833911049217932e-13,
+        "all_predictions_match": true
+      }
+    }
+  }
+}

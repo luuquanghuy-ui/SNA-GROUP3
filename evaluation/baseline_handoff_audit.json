@@ -1,0 +1,137 @@
+{
+  "status": "verified_against_delivered_files",
+  "e1": {
+    "models": {
+      "LogisticRegression": {
+        "n_test": 456,
+        "positive_precision": 1.0,
+        "positive_recall": 1.0,
+        "positive_f1": 1.0,
+        "macro_f1": 1.0,
+        "tp": 228,
+        "fp": 0,
+        "tn": 228,
+        "fn": 0,
+        "n_positive": 228,
+        "n_negative": 228,
+        "average_precision": 1.0
+      },
+      "MLP": {
+        "n_test": 456,
+        "positive_precision": 1.0,
+        "positive_recall": 1.0,
+        "positive_f1": 1.0,
+        "macro_f1": 1.0,
+        "tp": 228,
+        "fp": 0,
+        "tn": 228,
+        "fn": 0,
+        "n_positive": 228,
+        "n_negative": 228,
+        "average_precision": 1.0
+      },
+      "RandomForest": {
+        "n_test": 456,
+        "positive_precision": 0.9956331877729258,
+        "positive_recall": 1.0,
+        "positive_f1": 0.9978118161925602,
+        "macro_f1": 0.997807006997379,
+        "tp": 228,
+        "fp": 1,
+        "tn": 227,
+        "fn": 0,
+        "n_positive": 228,
+        "n_negative": 228,
+        "average_precision": 1.0
+      }
+    },
+    "test_accounts_same_across_models": true,
+    "test_matches_processed_fox8_split": true,
+    "prediction_sha256": "6471a0cd61ca8ed939900fd1a7aa8d9dd5da3924ef279017e2f851a76f696715",
+    "metrics_sha256": "dbdd06653c9ab82b4bfc6ff89433f8a4d3905e03502a00fb238d929924b864b0",
+    "source_split_sha256": "e2c912981586eed6716a2176e4f0ab29bcdb977b4199cc865b6d413976b1d893",
+    "source_manifest_sha256": "0ae0f01f269f33aabf518ba79e96a0bf71e5a619b76bded462964aee3bba00f9"
+  },
+  "e2": {
+    "models": {
+      "DummyClassifier": {
+        "n_test": 44938,
+        "positive_precision": 0.0,
+        "positive_recall": 0.0,
+        "positive_f1": 0.0,
+        "macro_f1": 0.49791627096298446,
+        "tp": 0,
+        "fp": 0,
+        "tn": 44565,
+        "fn": 373,
+        "n_positive": 373,
+        "n_negative": 44565,
+        "average_precision": 0.008300324892073524
+      },
+      "LogisticRegression": {
+        "n_test": 44938,
+        "positive_precision": 0.08913097301312206,
+        "positive_recall": 0.9651474530831099,
+        "positive_f1": 0.1631912964641886,
+        "macro_f1": 0.5599959103307557,
+        "tp": 360,
+        "fp": 3679,
+        "tn": 40886,
+        "fn": 13,
+        "n_positive": 373,
+        "n_negative": 44565,
+        "average_precision": 0.47116365089023776
+      }
+    },
+    "test_matches_person1": true,
+    "prediction_sha256": "b3c1c6df14c3c47cbecd72d64bee02b239d4fc3dbb1d5a8b5f5d7cac17b9d99f",
+    "metrics_sha256": "dd4950f25d52af6ac0dce41f1f15a6e76ab65e2a051cc3e58715887279e01ae3"
+  },
+  "e3": {
+    "counts_checked": {
+      "n_nodes": 224685,
+      "n_active_nodes": 84819,
+      "n_edges": 1905386,
+      "n_isolates": 139866,
+      "n_communities": 2101
+    },
+    "activity_by_label": {
+      "bad_active": 1100,
+      "bad_isolate": 766,
+      "good_active": 83719,
+      "good_isolate": 139100
+    },
+    "input_hashes_match_nguoi0": {
+      "honduras_bad_normalized.jsonl": true,
+      "honduras_good_normalized.jsonl": true,
+      "honduras_account_manifest.csv": true,
+      "honduras_account_splits.csv": true,
+      "quality_audit/group_a_exact_duplicate_candidates.csv": true,
+      "quality_audit/group_b_metadata_conflicts.csv": true,
+      "quality_audit/group_c_text_conflicts.csv": true
+    },
+    "degree_sum_matches_edges": true,
+    "node_labels_splits_match_person1": true,
+    "edge_endpoints_valid": true,
+    "community_summary_matches_nodes": true,
+    "metrics_sha256": "7293ab14e908e74850e81b42538d5d2857c8594d601daa33e075f42c29ed709f",
+    "nodes_sha256": "d1eddecbbfaa945106b20405f3bcaa721c2b116a1e5dac2d959eae404397c5e9",
+    "edges_sha256": "fa1406ae0ad530388e6eee5a826466608157d19501931db1298315dc0c5821f1"
+  },
+  "model_artifact_sha256": {
+    "nguoi2\\models-20261018T031152Z-1-001\\models\\e1_behavioral_encoder.pt": "769f6481f94a39ea5937111da14f7b7fa58dd3f9f4905f9772cc3092201da50a",
+    "nguoi2\\models-20261018T031152Z-1-001\\models\\e1_mlp_full_checkpoint.pt": "39a08c0bb51a0aa292ce9023412b36d1f648239929e8ca5bb8341dd3c6e6e81c",
+    "nguoi2\\models-20261018T031152Z-1-001\\models\\logisticregression.joblib": "f4b95a282b388644883fec29d2b3a0a78a02e24fa0ca6853452245157ccc0d16",
+    "nguoi2\\models-20261018T031152Z-1-001\\models\\randomforest.joblib": "652f6152ee46977291d20e2a951e2445ea852fb34eb1ee34378ec9df5193454d",
+    "nguoi2\\preprocessing-20261018T031232Z-1-001\\preprocessing\\tfidf_vectorizer.joblib": "c9a0500fe48540d54d09f4cc9b313a5b9ace12c1a1fd60844424671f06adeb43",
+    "nguoi3\\models-20261018T031439Z-1-001\\models\\dummyclassifier.joblib": "2ac6b4f6cde07e7dbb35c9dbae53e62c5d3b64266d8107776cb1b53e09c323d0",
+    "nguoi3\\models-20261018T031439Z-1-001\\models\\logisticregression.joblib": "a89b6ad0f54ccac92e0e9a7061bd76215d9f99181374b5bb2ca2daeee7fd35f7",
+    "nguoi3\\preprocessing-20261018T031441Z-1-001\\preprocessing\\scaler.joblib": "eacdbecbba3ac81531c5da54de1658428d99154b38bba4545f251f5f958c0442"
+  },
+  "result_rows": 67,
+  "limitations": [
+    "Output files were checked against processed inputs in nguoi0; notebooks were not rerun unchanged in a fresh runtime.",
+    "E1 and E2 use different input representations, so direct checkpoint transfer is not implemented.",
+    "E3 uses full corpus and is descriptive, not the held-out E2 test protocol in the proposal."
+  ]
+}

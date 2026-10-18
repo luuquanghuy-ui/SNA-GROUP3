@@ -1,0 +1,28 @@
+{
+  "scope": "E1 notebook training/evaluation cells rerun from Fox8 raw NDJSON and Person 0 manifest/split; Colab ZIP read replaced by equivalent direct NDJSON read; output written to a temporary folder.",
+  "python": "3.11.9",
+  "scikit_learn": "1.8.0",
+  "torch": "2.11.0+cpu",
+  "models": {
+    "LogisticRegression": {
+      "reported_bot_f1": 1.0,
+      "rerun_bot_f1": 1.0,
+      "prediction_agreement_fraction": 1.0,
+      "max_absolute_probability_difference": 6.529272789101981e-09
+    },
+    "MLP": {
+      "reported_bot_f1": 1.0,
+      "rerun_bot_f1": 1.0,
+      "prediction_agreement_fraction": 1.0,
+      "max_absolute_probability_difference": 1.6465783118993493e-06
+    },
+    "RandomForest": {
+      "reported_bot_f1": 0.9978118161925602,
+      "rerun_bot_f1": 0.9978118161925602,
+      "prediction_agreement_fraction": 1.0,
+      "max_absolute_probability_difference": 0.010000000000000009
+    }
+  },
+  "all_bot_f1_match": true,
+  "all_predictions_match": true
+}

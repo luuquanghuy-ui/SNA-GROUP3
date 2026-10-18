@@ -1,0 +1,7 @@
+{
+  "pythonhashseed": "1",
+  "networkx": "3.6.1",
+  "n_communities": 2102,
+  "largest_community_nodes": 17295,
+  "modularity": 0.6551427586965028
+}
