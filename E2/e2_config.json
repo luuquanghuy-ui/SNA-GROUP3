@@ -1,0 +1,16 @@
+{
+    "project": "Honduras Bot Detection",
+    "phase": "E2 - Baseline Classification",
+    "features": [
+        "tweet_count",
+        "avg_text_length",
+        "url_ratio",
+        "hashtag_ratio",
+        "mention_ratio",
+        "retweet_ratio"
+    ],
+    "models": [
+        "DummyClassifier",
+        "LogisticRegression"
+    ]
+}
