@@ -1,21 +1,10 @@
 # Quy ước làm việc trong repository
 
-## Thư mục phụ trách
-
-| Thư mục | Nội dung |
-| --- | --- |
-| `data/preprocessing/` | Khảo sát, chuẩn hóa, manifest, split và audit duplicate |
-| `data/validation/` | Xác minh nhãn Honduras và tạo feature cấp tài khoản |
-| `E1/` | Fox8-23: notebook, code và hướng dẫn E1 |
-| `E2/` | Honduras Bad/Good: notebook, code và hướng dẫn E2 |
-| `E3/` | Coordination graph: notebook, code và hướng dẫn E3 |
-| `evaluation/` | Tổng hợp metric, kiểm tra tái lập và báo cáo đối chiếu |
-
 Mỗi phần cập nhật hướng dẫn chạy trong README gốc, ghi input/output và thứ tự chạy. Chỉ thêm README riêng nếu phần đó cần hướng dẫn chi tiết. File dùng chung hoặc thay đổi giao diện đầu vào phải được mô tả trong PR. Không đưa dữ liệu gốc, checkpoint lớn, môi trường ảo, cache hoặc thông tin đăng nhập vào commit.
 
 ## Branch
 
-Mỗi công việc tạo một nhánh từ `main` mới nhất. Đặt tên theo dạng `data/preprocessing-<mo-ta>`, `data/validation-<mo-ta>`, `e1/<mo-ta>`, `e2/<mo-ta>`, `e3/<mo-ta>`, `evaluation/<mo-ta>` hoặc `docs/<mo-ta>`. Nhánh `evaluation-huy` đã dùng là hợp lệ; không cần đổi tên lịch sử.
+Mỗi công việc tạo một nhánh từ `main` mới nhất. Đặt tên theo dạng `data/preprocessing-<mo-ta>`, `data/validation-<mo-ta>`, `e1/<mo-ta>`, `e2/<mo-ta>`, `e3/<mo-ta>`, `evaluation/<mo-ta>` hoặc `docs/<mo-ta>`.
 
 Ví dụ sau khi clone repo và khi không có thay đổi chưa lưu:
 
