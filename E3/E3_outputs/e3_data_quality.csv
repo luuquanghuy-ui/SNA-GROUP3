@@ -1,0 +1,9 @@
+metric,value
+conflict_ids_excluded,389
+conflict_rows_removed,1362
+duplicate_rows_removed,7283
+hashtag_time_events,403043
+raw_rows,1262830
+retained_valid_rows,1254185
+rows_without_hashtag,237730
+unique_retained_tweet_ids,1254185

@@ -1,0 +1,28 @@
+{
+  "seed": 42,
+  "window_seconds": 3600,
+  "max_users_per_event": 100,
+  "min_weight": 2,
+  "max_pair_updates": 20000000,
+  "graph_scope": "full corpus, descriptive/transductive; no held-out predictive score",
+  "duplicate_policy": "drop all B/C conflict IDs; retain first occurrence of other tweet IDs",
+  "label_mapping": {
+    "0": "Bad",
+    "1": "Good"
+  },
+  "input_sha256": {
+    "honduras_bad_normalized.jsonl": "95c3678bb2741ec683393ae84eb291fbe1a9756236f6b047cdb6b0bc4b1244e6",
+    "honduras_good_normalized.jsonl": "0d6d9df7daa71a47d6a74edd48f2dbdb025f9985e9245d31f2e1b1e9e1a533fe",
+    "honduras_account_manifest.csv": "21a6ea3726de91471bebc68229a0c2e1ced661b4370552df207aa3f590f7a484",
+    "honduras_account_splits.csv": "8f2cea8189746dc8c9d258addd95cbabdf68d59b239bc83b6057e05df77b2e83",
+    "quality_audit/group_a_exact_duplicate_candidates.csv": "c72d45d2b0844cf25aced213105da0efad534dfe251d10897762c3eba656da3c",
+    "quality_audit/group_b_metadata_conflicts.csv": "33136182c6b213f63fc8d229486079e605e6d07fca4d5347e7f095a538a084b5",
+    "quality_audit/group_c_text_conflicts.csv": "db048de782bd2b0c9357417c92fd360b8c31aee6662cc2a41eca75fc4a1d48c8"
+  },
+  "python": "3.13.16",
+  "packages": {
+    "networkx": "3.7",
+    "pandas": "2.2.3",
+    "matplotlib": "3.10.0"
+  }
+}
