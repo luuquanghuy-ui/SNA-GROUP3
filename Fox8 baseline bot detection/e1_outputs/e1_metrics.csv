@@ -1,0 +1,4 @@
+model,n_test,precision_bot,recall_bot,f1_bot,macro_f1,accuracy,average_precision_bot,tn,fp,fn,tp
+LogisticRegression,456,1.0,1.0,1.0,1.0,1.0,1.0,228,0,0,228
+MLP,456,1.0,1.0,1.0,1.0,1.0,1.0,228,0,0,228
+RandomForest,456,0.9956331877729258,1.0,0.9978118161925602,0.997807006997379,0.9978070175438597,1.0,227,1,0,228
