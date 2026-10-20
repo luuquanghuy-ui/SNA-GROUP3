@@ -1,0 +1,44 @@
+{
+  "experiment": "E1 - Fox8-23 Behavioral Representation Learning",
+  "random_seed": 42,
+  "device": "cpu",
+  "split_file": "fox8_account_splits.csv",
+  "split_ratio_expected": {
+    "train": 0.7,
+    "validation": 0.1,
+    "test": 0.2
+  },
+  "text_preprocessing": {
+    "max_tweets_per_account": 30,
+    "max_characters_per_account": 5000,
+    "lowercase": true,
+    "tfidf_ngram_range": [
+      1,
+      2
+    ],
+    "tfidf_max_features": 10000,
+    "tfidf_min_df": 2
+  },
+  "models": {
+    "LogisticRegression": {
+      "max_iter": 2000,
+      "class_weight": "balanced"
+    },
+    "RandomForest": {
+      "n_estimators": 200,
+      "class_weight": "balanced"
+    },
+    "MLP": {
+      "hidden_dim": 256,
+      "embedding_dim": 128,
+      "epochs_max": 20,
+      "early_stopping_patience": 4,
+      "batch_size": 64,
+      "learning_rate": 0.001
+    }
+  },
+  "excluded_fields": [
+    "dataset"
+  ],
+  "note": "Input representation is TF-IDF from account tweet text; source-label confounding may limit generalization."
+}
