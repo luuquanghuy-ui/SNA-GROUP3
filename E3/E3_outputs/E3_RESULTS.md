@@ -2,8 +2,8 @@
 Dữ liệu: 1,262,830 records ban đầu; giữ 1,254,185 tweet hợp lệ sau lọc.
 Loại 1,362 rows của 389 conflict IDs và 7,283 rows trùng còn lại.
 Node: 224,685; active: 84,819; isolate: 139,866.
-Cạnh: 1,905,386; components: 141,752; cộng đồng active: 2,101.
-Modularity weighted: 0.6540762661863168; community lớn nhất: 17,482 node.
+Cạnh: 1,905,386; components: 141,752; cộng đồng active: 2,104.
+Modularity weighted: 0.6546230630786463; community lớn nhất: 17,486 node.
 Bỏ 3,536 event có hơn 100 account.
 Graph dùng hashtag–giờ UTC, minimum weight 2; Louvain seed 42.
 
