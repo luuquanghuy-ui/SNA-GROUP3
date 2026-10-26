@@ -1,0 +1,10 @@
+{
+    "experiment": "E2 Scratch vs Transfer Learning",
+    "batch_size": 128,
+    "epochs": 10,
+    "learning_rate": 0.001,
+    "pos_weight": 119.42802450229709,
+    "optimizer": "Adam",
+    "loss_function": "BCEWithLogitsLoss",
+    "device": "cuda"
+}
