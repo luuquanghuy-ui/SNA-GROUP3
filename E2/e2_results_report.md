@@ -5,7 +5,7 @@
 Tài liệu này tổng hợp chi tiết kết quả thực nghiệm của **Thí nghiệm 2 (E2: Scratch vs Transfer Learning)** thuộc dự án Phát hiện Bot trên dữ liệu Honduras (Nhiệm vụ do **Người 3** phụ trách).
 
 Mục tiêu cốt lõi là giải quyết câu hỏi nghiên cứu:
-> *Liệu việc chuyển giao biểu diễn hành vi (behavioral representations) được huấn luyện trước trên tập dữ liệu Fox8-23 có giúp cải thiện khả năng phân loại tài khoản Bad/Good trên tập dữ liệu Honduras so với việc huấn luyện từ đầu (Train from Scratch) và các phương pháp baseline thống kê hay không?*
+> *Liệu việc chuyển giao biểu diễn hành vi (behavioral representations) được huấn luyện trước trên tập dữ liệu Fox8-23 có giúp cải thiện khả năng phân loại tài khoản Bad/Good trên tập dữ liệu Honduras so với việc huấn luyện từ đầu (Train from Scratch) và các phương pháp baseline hay không?*
 
 ---
 
@@ -29,6 +29,7 @@ Kết quả chi tiết đạt được trên tập **Test** cố định như sa
 
 | Phương pháp (Method) | Bad-Precision | Bad-Recall | Bad-F1 | Macro-F1 | AP |
 | :--- | :---: | :---: | :---: | :---: | :---: |
+| **Dummy Classifier (Most Frequent)** | 0.0000 | 0.0000 | 0.0000 | 0.4700 | 0.0891 |
 | **LR (Full Features)** | 0.0891 | **0.9651** | 0.1632 | 0.5600 | 0.4712 |
 | **LR (No `tweet_count`)** | 0.0863 | **0.9812** | 0.1587 | 0.5566 | 0.3688 |
 | **Train from Scratch** | **0.9961** | 0.6810 | 0.8089 | 0.9038 | **0.9204** |
@@ -38,9 +39,10 @@ Kết quả chi tiết đạt được trên tập **Test** cố định như sa
 
 ## 4. Phân Tích & Biện Luận Kết Quả
 
-### 4.1. Baseline Thống Kê vs. Neural Behavioral Encoder
-* **Logistic Regression (LR)** trên 6 đặc trưng thống kê số (`tweet_count`, `url_ratio`, `hashtag_ratio`,...): Mặc dù cài đặt `class_weight='balanced'` giúp Recall đạt mức rất cao (~0.965), mô hình lại gặp phải hiện tượng **Dương tính giả (False Positives) cực kỳ cao**, dẫn đến **Bad-Precision rất thấp (~8.9%)** và **Bad-F1 chỉ đạt ~0.1632**.
-* **Neural Network Encoders** (sử dụng đầu vào văn bản TF-IDF 10,000 chiều ở cấp tài khoản): Thể hiện sự vượt trội hoàn toàn so với baseline thống kê ở tất cả các chỉ số, đẩy Bad-F1 vượt mốc **0.80**.
+### 4.1. So Sánh Các Cấp Độ Baseline (Dummy vs. ML Thống kê vs. Neural Encoder)
+* **Dummy Classifier (Most Frequent):** Do chiến lược mặc định dự đoán toàn bộ tài khoản thuộc lớp đa số (Good - nhãn `1`), mô hình hoàn toàn bỏ sót 100% số lượng Bot. Các chỉ số trên lớp mục tiêu Bad (**Precision, Recall, F1**) đều bằng **0.0000**, xác lập mức sàn tối thiểu của bài toán do ảnh hưởng nghiêm trọng từ mất cân bằng lớp.
+* **Logistic Regression (LR)** trên 6 đặc trưng thống kê số (`tweet_count`, `url_ratio`, `hashtag_ratio`,...): Việc thiết lập `class_weight='balanced'` giúp Recall đạt mức rất cao (~0.965), nhưng mô hình lại gặp phải hiện tượng **Dương tính giả (False Positives) cực kỳ cao**, dẫn đến **Bad-Precision rất thấp (~8.9%)** và **Bad-F1 chỉ đạt ~0.1632**.
+* **Neural Network Encoders** (với đầu vào văn bản TF-IDF 10,000 chiều ở cấp tài khoản): Thể hiện sự vượt trội hoàn toàn so với cả hai baseline trên ở tất cả các chỉ số, đẩy Bad-F1 vượt mốc **0.80**.
 
 ### 4.2. Train from Scratch vs. Transfer Learning (Phân tích cốt lõi)
 * **Train from Scratch:** Mô hình đạt độ chính xác gần như tuyệt đối ở nhãn Bad (**Bad-Precision = 0.9961**), tuy nhiên khả năng bao phủ lại hạn chế khi bỏ sót tới gần 32% số lượng Bot thật sự (**Bad-Recall = 0.6810**).
@@ -56,21 +58,27 @@ Kết quả chi tiết đạt được trên tập **Test** cố định như sa
 
 ---
 
-## 5. Sản Phẩm Bàn Giao (Artifacts)
+## 5. Sản Phẩm Bàn Giao (Artifacts & Deliverables)
 
-Tất cả các sản phẩm của thí nghiệm E2 đã được lưu trữ tại thư mục dự án:
-1. **Bảng metrics tổng hợp:** `evaluation/E2_RESULTS_TABLE.csv`
-2. **Dự đoán chi tiết trên tập Validation/Test:** `evaluation/e2_predictions_e1_emb.csv`
-3. **Bộ chuẩn hóa Preprocessing:** `preprocessing/scaler_e1_emb.joblib`
-4. **Model Checkpoints:**
-   * `models/model_scratch_e2.pt` (Mô hình Train from Scratch)
-   * `models/model_transfer_e2.pt` (Mô hình Fine-tuning từ Fox8)
+Tất cả các sản phẩm của thí nghiệm E2 đã được phân loại và lưu trữ theo chuẩn cấu trúc dự án:
+
+1. **Báo cáo & Bảng chỉ số nghiệm thu (`evaluation/`):**
+   * `evaluation/E2_RESULTS_TABLE.csv`: Bảng tổng hợp các chỉ số đánh giá (Dummy, LR, Scratch, Transfer).
+   * `evaluation/E2_RESULTS.md`: Báo cáo chi tiết phân tích thực nghiệm E2.
+2. **Thư mục Artifacts bàn giao (`artifacts/e2/` hoặc `e2_outputs/`):**
+   * `e2_scratch_model.pt`: Checkpoint trọng số mô hình Train from Scratch.
+   * `e2_transfer_model.pt`: Checkpoint trọng số mô hình Transfer Learning.
+   * `honduras_e2_scratch_embeddings.csv`: Vector biểu diễn 128D từ Encoder Scratch (Bàn giao cho **Người 5**).
+   * `honduras_e2_transfer_embeddings.csv`: Vector biểu diễn 128D từ Encoder Transfer (Bàn giao cho **Người 5**).
+   * `e2_predictions.csv`: Kết quả dự đoán nhãn và xác suất chi tiết trên tập Test (Bàn giao cho **Người 6**).
+   * `e2_config.json`: Cấu hình siêu tham số phục vụ tính tái lập.
+   * `e2_confusion_matrices.png`: Hình ảnh ma trận nhầm lẫn của các mô hình Neural Network.
 
 ---
 
 ## 6. Hướng Dẫn Bàn Giao Cho Giai Đoạn Tiếp Theo
 
 * **Gửi Người 5 (E3 Proposed Graphs):**
-  * Khuyến nghị ưu tiên sử dụng vector biểu diễn từ **`model_transfer_e2`** (Transferred Embeddings) để xây dựng đồ thị tăng cường, vì chất lượng biểu diễn của mô hình Transfer vượt trội rõ rệt so với mô hình Scratch.
+  * Ưu tiên sử dụng file **`honduras_e2_transfer_embeddings.csv`** (Transferred Embeddings) để xây dựng Đồ thị Tương đồng (Similarity Graph), vì chất lượng biểu diễn của mô hình Transfer vượt trội rõ rệt so với Scratch (**+16.35% Bad-Recall**).
 * **Gửi Người 6 (Báo cáo tổng kết & Ablation final):**
-  * Mức tăng trưởng từ **0.8089 Bad-F1 (Scratch)** lên **0.9026 Bad-F1 (Transfer)** là bằng chứng thực nghiệm quan trọng nhất để trả lời câu hỏi nghiên cứu của đồ án về hiệu quả của Transfer Learning.
+  * Mức tăng trưởng từ **0.8089 Bad-F1 (Scratch)** lên **0.9026 Bad-F1 (Transfer)** so với mức **0.0000 (Dummy)** và **0.1632 (LR)** là minh chứng định lượng mạnh mẽ nhất trả lời câu hỏi nghiên cứu cốt lõi của đồ án.
