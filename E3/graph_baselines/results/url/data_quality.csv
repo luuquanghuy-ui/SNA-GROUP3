@@ -1,0 +1,14 @@
+metric,value
+raw_rows,1262830
+retained_valid_rows,1254185
+rows_without_signal,925047
+conflict_rows_removed,1362
+duplicate_rows_removed,7283
+conflict_ids_excluded,389
+unique_retained_tweet_ids,1254185
+n_events_raw,242203
+source_rows::honduras_bad_normalized.jsonl,137252
+source_rows::honduras_good_normalized.jsonl,1125578
+url_source::none,925047
+url_source::text_fallback,44590
+url_source::structured,284548

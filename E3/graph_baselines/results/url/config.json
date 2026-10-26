@@ -1,0 +1,18 @@
+{
+  "signal": "url",
+  "algorithm": "leiden",
+  "partition_type": "RBConfigurationVertexPartition",
+  "graph_scope": "full corpus, descriptive/transductive",
+  "window_seconds": 3600,
+  "max_users_per_event": 100,
+  "min_weight": 2,
+  "seed": 42,
+  "resolution": 1.0,
+  "leiden_iterations": -1,
+  "duplicate_policy": "drop all B/C conflict IDs; retain first occurrence of other tweet IDs",
+  "label_policy": "Bad/Good only metadata; never used to create edges or tune threshold",
+  "url_text_fallback_allowed": true,
+  "event_definition": "normalized URL + fixed UTC-hour",
+  "url_normalization": "host casefold; strip www; strip fragment; remove common tracking params; ignore scheme",
+  "pair_updates": 687985
+}
