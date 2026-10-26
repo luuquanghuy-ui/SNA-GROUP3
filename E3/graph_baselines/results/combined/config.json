@@ -1,0 +1,34 @@
+{
+  "signal": "combined",
+  "algorithm": "leiden",
+  "partition_type": "RBConfigurationVertexPartition",
+  "graph_scope": "full corpus, descriptive/transductive",
+  "window_seconds": 3600,
+  "max_users_per_event": 100,
+  "seed": 42,
+  "resolution": 1.0,
+  "leiden_iterations": -1,
+  "duplicate_policy": "drop all B/C conflict IDs; retain first occurrence of other tweet IDs",
+  "label_policy": "Bad/Good only metadata; never used to create edges or tune threshold",
+  "url_text_fallback_allowed": true,
+  "combined_formula": "equal coefficient sum of normalized available baseline signals",
+  "signals_used": [
+    "hash",
+    "url"
+  ],
+  "coefficient_per_signal": 0.5,
+  "normalization": {
+    "hash": {
+      "max_weight": 1938.0,
+      "normalization": "max"
+    },
+    "url": {
+      "max_weight": 523.0,
+      "normalization": "max"
+    }
+  },
+  "combined_min_score": 0.0,
+  "note": "Union of single-signal edges after each graph already applied MIN_WEIGHT.",
+  "single_signal_min_weight": 2,
+  "combined_edge_rule": "union of Hash/URL edges after each single-signal graph already passed MIN_WEIGHT"
+}

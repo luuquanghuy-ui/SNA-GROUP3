@@ -1,0 +1,2 @@
+experiment,method,scope,seed,resolution,leiden_iterations,window_seconds,max_users_per_event,min_weight,n_nodes,n_active_nodes,n_edges,n_isolates,isolated_node_rate,density,n_components,largest_component_nodes,n_communities,largest_community_nodes,median_community_size,modularity
+E3,url,full_corpus_descriptive_transductive,42,1.0,-1,3600,100,2,224685,10586,43953,214099,0.9528851503215613,1.7412947554454204e-06,214453,8678,391,4980,2.0,0.8431948064332121
