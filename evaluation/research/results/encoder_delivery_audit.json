@@ -1,0 +1,94 @@
+{
+  "status": "sample_compatibility_passed_not_full_embedding_validation",
+  "snapshot_commit": "ea772b93115f082f95d377f97f622a94d2239570",
+  "architecture": {
+    "input_dim": 10000,
+    "hidden_dim": 256,
+    "embedding_dim": 128
+  },
+  "sample_selection": "First sorted Test account IDs per label; stratified smoke sample, not a natural-distribution evaluation",
+  "sample_per_label_requested": 64,
+  "n_accounts": 128,
+  "sample_counts": {
+    "0": 64,
+    "1": 64
+  },
+  "account_ids_sha256": "ca10695246d4f77a9d80aa680fbc9fe28968cec832c773caaeada5231bac116c",
+  "normalized_records_scanned": 1262830,
+  "embedding_shape": [
+    128,
+    128
+  ],
+  "all_finite": true,
+  "exact_repeatability_eval_mode": true,
+  "zero_tfidf_rows": 0,
+  "unique_embedding_rows": 127,
+  "preprocessing": {
+    "max_tweets": 30,
+    "max_characters": 5000,
+    "tweet_selection": "First valid texts in normalized input file order, as in delivered verification script; no refit of vectorizer"
+  },
+  "input_sha256": {
+    "D:\\mxhui\\.evaluation_inputs\\SNA-GROUP3\\ea772b93115f082f95d377f97f622a94d2239570\\Fox8 baseline bot detection\\models\\e1_behavioral_encoder.pt": "769f6481f94a39ea5937111da14f7b7fa58dd3f9f4905f9772cc3092201da50a",
+    "D:\\mxhui\\.evaluation_inputs\\SNA-GROUP3\\ea772b93115f082f95d377f97f622a94d2239570\\Fox8 baseline bot detection\\preprocessing\\tfidf_vectorizer.joblib": "c9a0500fe48540d54d09f4cc9b313a5b9ace12c1a1fd60844424671f06adeb43",
+    "D:\\mxhui\\nguoi0\\processed-20261018T032211Z-1-001\\processed\\honduras_account_splits.csv": "8f2cea8189746dc8c9d258addd95cbabdf68d59b239bc83b6057e05df77b2e83",
+    "D:\\mxhui\\nguoi0\\processed-20261018T032211Z-1-001\\processed\\honduras_bad_normalized.jsonl": "95c3678bb2741ec683393ae84eb291fbe1a9756236f6b047cdb6b0bc4b1244e6",
+    "D:\\mxhui\\nguoi0\\processed-20261018T032211Z-1-001\\processed\\honduras_good_normalized.jsonl": "0d6d9df7daa71a47d6a74edd48f2dbdb025f9985e9245d31f2e1b1e9e1a533fe"
+  },
+  "environment": {
+    "torch": "2.11.0",
+    "scikit-learn": "1.8.0",
+    "joblib": "1.5.3",
+    "pandas": "2.2.3",
+    "numpy": "1.26.4"
+  },
+  "limitations": [
+    "No E2 fine-tuning performed; this is the Fox8 E1 encoder, not the Transferred E2 encoder.",
+    "Only the explicitly sampled Test accounts are validated, not all 224685 accounts or all Test IDs.",
+    "Finite, repeatable embeddings do not establish useful transfer or generalization.",
+    "Raw tweet count is not an input column of this TF-IDF encoder; tweet budget/activity can still affect representation."
+  ],
+  "delivered_embeddings": {
+    "path": "D:\\mxhui\\nguoi 1\\new\\honduras_e1_embeddings.csv",
+    "bytes": 272363032,
+    "sha256": "de88892489b81517f7c7fda313c878cd1f08ea4e1fdaa0cbd25fe1fdbbc1b702",
+    "n_rows": 224685,
+    "n_unique_account_ids": 224685,
+    "embedding_dimension": 128,
+    "label_column_present": true,
+    "duplicate_id_rows": 0,
+    "blank_id_rows": 0,
+    "unknown_account_ids": 0,
+    "missing_account_ids": 0,
+    "missing_test_account_ids": 0,
+    "label_mismatch_rows": 0,
+    "nonfinite_embedding_rows": 0,
+    "zero_norm_embedding_rows": 0,
+    "reference_split_counts": {
+      "train": 157279,
+      "test": 44938,
+      "validation": 22468
+    },
+    "structural_validation_passed": true,
+    "sample_value_comparison": {
+      "n_accounts": 128,
+      "missing_sample_ids": 0,
+      "matches_recomputed_E1_encoder": true,
+      "mismatched_rows": 0,
+      "max_absolute_difference": 1.1920928955078125e-06,
+      "rtol": 1e-06,
+      "atol": 1e-07
+    },
+    "embedding_row_fingerprints": {
+      "precision": "float32",
+      "algorithm": "sha256",
+      "n_unique_fingerprints": 117941,
+      "largest_identical_vector_group": 2241,
+      "largest_group_labels": {
+        "1": 2241
+      },
+      "groups_containing_both_labels": 5
+    },
+    "provenance_scope": "All rows checked structurally; only the fixed sample was re-encoded and compared. Not full regeneration or E2 fine-tuning."
+  }
+}

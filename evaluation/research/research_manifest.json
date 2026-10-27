@@ -1,0 +1,113 @@
+{
+  "repository": "https://github.com/luuquanghuy-ui/SNA-GROUP3",
+  "snapshot_commit": "ea772b93115f082f95d377f97f622a94d2239570",
+  "assignment": "Person 6 — Evaluation, Ablation & Final Report",
+  "protocol_status": "new_assignment_reviewed; experimental_plan_not_received",
+  "classification_runs": [
+    {
+      "experiment": "E1",
+      "method": "LogisticRegression",
+      "run_id": "e1_logistic_regression",
+      "predictions": "Fox8 baseline bot detection/evaluation/e1_predictions.csv",
+      "reported_metrics": "Fox8 baseline bot detection/evaluation/e1_metrics.csv",
+      "config": "Fox8 baseline bot detection/e1_config.json",
+      "model_filter": {"column": "model", "value": "LogisticRegression"},
+      "columns": {"id": "user_id", "truth": "y_true", "prediction": "y_pred", "score": "bot_probability"},
+      "positive_label": "1",
+      "negative_label": "0",
+      "feature_set": "account_text_tfidf_max30tweets_max5000chars",
+      "seed": 42,
+      "seed_evidence": "e1_config.json: random_seed"
+    },
+    {
+      "experiment": "E1",
+      "method": "RandomForest",
+      "run_id": "e1_random_forest",
+      "predictions": "Fox8 baseline bot detection/evaluation/e1_predictions.csv",
+      "reported_metrics": "Fox8 baseline bot detection/evaluation/e1_metrics.csv",
+      "config": "Fox8 baseline bot detection/e1_config.json",
+      "model_filter": {"column": "model", "value": "RandomForest"},
+      "columns": {"id": "user_id", "truth": "y_true", "prediction": "y_pred", "score": "bot_probability"},
+      "positive_label": "1",
+      "negative_label": "0",
+      "feature_set": "account_text_tfidf_max30tweets_max5000chars",
+      "seed": 42,
+      "seed_evidence": "e1_config.json: random_seed"
+    },
+    {
+      "experiment": "E1",
+      "method": "MLP",
+      "run_id": "e1_mlp",
+      "predictions": "Fox8 baseline bot detection/evaluation/e1_predictions.csv",
+      "reported_metrics": "Fox8 baseline bot detection/evaluation/e1_metrics.csv",
+      "config": "Fox8 baseline bot detection/e1_config.json",
+      "model_filter": {"column": "model", "value": "MLP"},
+      "columns": {"id": "user_id", "truth": "y_true", "prediction": "y_pred", "score": "bot_probability"},
+      "positive_label": "1",
+      "negative_label": "0",
+      "feature_set": "account_text_tfidf_max30tweets_max5000chars",
+      "seed": 42,
+      "seed_evidence": "e1_config.json: random_seed"
+    },
+    {
+      "experiment": "E2",
+      "method": "DummyClassifier",
+      "run_id": "e2_majority_class",
+      "predictions": "E2/evaluation/e2_predictions.csv",
+      "reported_metrics": "E2/evaluation/e2_metrics.csv",
+      "config": "E2/e2_config.json",
+      "code": "E2/E2_Honduras_Baseline.ipynb",
+      "columns": {"id": "account_id", "truth": "label", "prediction": "dummy_pred", "score": "dummy_prob_bad"},
+      "positive_label": "0",
+      "negative_label": "1",
+      "feature_set": "six_account_statistics",
+      "seed": null,
+      "seed_evidence": "DummyClassifier(strategy='prior') is deterministic; config does not record a seed"
+    },
+    {
+      "experiment": "E2",
+      "method": "LogisticRegression",
+      "run_id": "e2_logistic_regression",
+      "predictions": "E2/evaluation/e2_predictions.csv",
+      "reported_metrics": "E2/evaluation/e2_metrics.csv",
+      "config": "E2/e2_config.json",
+      "code": "E2/E2_Honduras_Baseline.ipynb",
+      "columns": {"id": "account_id", "truth": "label", "prediction": "lr_pred", "score": "lr_prob_bad"},
+      "positive_label": "0",
+      "negative_label": "1",
+      "feature_set": "six_account_statistics",
+      "seed": 42,
+      "seed_evidence": "E2_Honduras_Baseline.ipynb: LogisticRegression(random_state=42); absent from config"
+    }
+  ],
+  "graph_runs": [
+    {
+      "run_id": "e3_hashtag_hour_louvain_prototype",
+      "method": "Hash-hour prototype",
+      "purpose": "prototype_reference_only",
+      "scope": "full_corpus",
+      "community_method": "Louvain",
+      "resolution": 1.0,
+      "seed": 42,
+      "nodes": "E3/E3_outputs/e3_graph_nodes.csv",
+      "edges": "E3/E3_outputs/e3_graph_edges.csv",
+      "communities": "E3/E3_outputs/e3_communities.csv",
+      "reported_metrics": "E3/E3_outputs/e3_graph_metrics.csv",
+      "config": "E3/E3_outputs/e3_run_config.json",
+      "code": "E3/E3_Coordination_Graph.ipynb",
+      "source_report": "E3/E3_outputs/E3_RESULTS.md"
+    }
+  ],
+  "pending": [
+    {"experiment": "E1", "method": "Honduras encoder verification evidence", "owner": "Ngoc Diem", "priority": 1, "required": true, "reason": "Need verification_report.json, embedding ID manifest, shape/finite/stability results, checkpoint and preprocessing hashes; CSV may be shared outside GitHub."},
+    {"experiment": "E2", "method": "Train from Scratch", "owner": "Le Phuc Thinh", "priority": 1, "required": true, "reason": "Need test predictions, positive-class scores, config, selected checkpoint and validation selection evidence."},
+    {"experiment": "E2", "method": "Fox8-pretrained + Fine-tuning", "owner": "Le Phuc Thinh", "priority": 1, "required": true, "reason": "Need the same test IDs/input schema as Scratch and provenance of Fox8 initialization and fine-tuned encoder."},
+    {"experiment": "E2", "method": "Frozen encoder + linear classifier", "owner": "Le Phuc Thinh", "priority": 5, "required": false, "reason": "Optional under the assignment."},
+    {"experiment": "E3", "method": "Hash-only TF-IDF cosine + Leiden", "owner": "Tran Tuyet Nhu", "priority": 2, "required": true, "reason": "Need fixed Test nodes including isolates, edges, community assignments and full config."},
+    {"experiment": "E3", "method": "URL-only TF-IDF cosine + Leiden", "owner": "Tran Tuyet Nhu", "priority": 2, "required": true, "reason": "Need URL normalization, fixed Test nodes, edges, community assignments and config."},
+    {"experiment": "E3", "method": "CoRT-only", "owner": "Tran Tuyet Nhu", "priority": 3, "required": false, "reason": "Conditional on verified retweet target IDs; an exclusion with evidence is acceptable."},
+    {"experiment": "E3", "method": "Combined Baseline + Leiden", "owner": "Tran Tuyet Nhu", "priority": 1, "required": true, "reason": "Need accepted signals, normalized weights, fixed Test nodes, edges and Leiden objective/resolution/seed."},
+    {"experiment": "E3", "method": "Combined + Scratch", "owner": "Nguyen Van Nam", "priority": 1, "required": true, "reason": "Need Scratch checkpoint/embedding provenance, similarity graph, combined graph, assignments and config."},
+    {"experiment": "E3", "method": "Combined + Transferred", "owner": "Nguyen Van Nam", "priority": 1, "required": true, "reason": "Need E2 fine-tuned checkpoint/embedding provenance, similarity graph, combined graph, assignments and config."}
+  ]
+}
