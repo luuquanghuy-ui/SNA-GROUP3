@@ -1,0 +1,4 @@
+method,activity_source,spearman_tweet_count_degree,spearman_tweet_count_strength,high_activity_cutoff,high_activity_account_fraction,high_activity_degree_share,high_activity_strength_share,degree_top1pct_share
+baseline_delivered,"all normalized records incl. duplicates, descriptive only",0.5298015988437776,0.5329346088460796,9.0,0.10397667846095646,0.6371972505558926,0.6921623221588565,0.2963604514565582
+baseline_plus_scratch,"all normalized records incl. duplicates, descriptive only",0.5536206530130009,0.5085065149596857,9.0,0.10397667846095646,0.46284452483157656,0.39839559161643945,0.2227501228991085
+baseline_plus_transfer,"all normalized records incl. duplicates, descriptive only",0.5477112914394362,0.49855710637498923,9.0,0.10397667846095646,0.4638376372048658,0.3959664665696644,0.22477345940400986

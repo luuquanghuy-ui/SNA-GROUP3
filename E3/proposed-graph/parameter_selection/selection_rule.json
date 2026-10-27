@@ -1,0 +1,23 @@
+{
+  "split": "validation",
+  "seed": 42,
+  "threshold_candidates": [
+    0.7,
+    0.8,
+    0.9
+  ],
+  "k_candidates": [
+    5,
+    10,
+    20
+  ],
+  "minimum_valid_node_coverage": 0.9,
+  "minimum_lcc_retention_vs_k20": 0.95,
+  "threshold_rule": "largest passing threshold for both encoders",
+  "k_rule": "smallest passing k for both encoders",
+  "lambda": 0.5,
+  "lambda_reason": "equal total weight contribution after each graph is normalized by its positive undirected edge-weight sum",
+  "labels_used": false,
+  "test_metrics_used": false,
+  "status": "design_criteria_not_campaign_accuracy_optimization"
+}
