@@ -1,0 +1,44 @@
+{
+  "status": "sample_compatibility_passed_not_full_embedding_validation",
+  "snapshot_commit": "ea772b93115f082f95d377f97f622a94d2239570",
+  "architecture": {
+    "input_dim": 10000,
+    "hidden_dim": 256,
+    "embedding_dim": 128
+  },
+  "sample_selection": "First sorted Test account IDs per label; stratified smoke sample, not a natural-distribution evaluation",
+  "sample_per_label_requested": 64,
+  "n_accounts": 128,
+  "sample_counts": {
+    "0": 64,
+    "1": 64
+  },
+  "account_ids_sha256": "ca10695246d4f77a9d80aa680fbc9fe28968cec832c773caaeada5231bac116c",
+  "normalized_records_scanned": 1262830,
+  "embedding_shape": [
+    128,
+    128
+  ],
+  "all_finite": true,
+  "exact_repeatability_eval_mode": true,
+  "zero_tfidf_rows": 0,
+  "unique_embedding_rows": 127,
+  "preprocessing": {
+    "max_tweets": 30,
+    "max_characters": 5000,
+    "tweet_selection": "First valid texts in normalized input file order, as in delivered verification script; no refit of vectorizer"
+  },
+  "input_sha256": {
+    "D:\\mxhui\\nguoi2\\models-20261018T031152Z-1-001\\models\\e1_behavioral_encoder.pt": "769f6481f94a39ea5937111da14f7b7fa58dd3f9f4905f9772cc3092201da50a",
+    "D:\\mxhui\\nguoi2\\preprocessing-20261018T031232Z-1-001\\preprocessing\\tfidf_vectorizer.joblib": "c9a0500fe48540d54d09f4cc9b313a5b9ace12c1a1fd60844424671f06adeb43",
+    "D:\\mxhui\\nguoi0\\processed-20261018T032211Z-1-001\\processed\\honduras_account_splits.csv": "8f2cea8189746dc8c9d258addd95cbabdf68d59b239bc83b6057e05df77b2e83",
+    "D:\\mxhui\\nguoi0\\processed-20261018T032211Z-1-001\\processed\\honduras_bad_normalized.jsonl": "95c3678bb2741ec683393ae84eb291fbe1a9756236f6b047cdb6b0bc4b1244e6",
+    "D:\\mxhui\\nguoi0\\processed-20261018T032211Z-1-001\\processed\\honduras_good_normalized.jsonl": "0d6d9df7daa71a47d6a74edd48f2dbdb025f9985e9245d31f2e1b1e9e1a533fe"
+  },
+  "limitations": [
+    "No E2 fine-tuning performed; this is the Fox8 E1 encoder, not the Transferred E2 encoder.",
+    "Only the explicitly sampled Test accounts are validated, not all 224685 accounts or all Test IDs.",
+    "Finite, repeatable embeddings do not establish useful transfer or generalization.",
+    "Raw tweet count is not an input column of this TF-IDF encoder; tweet budget/activity can still affect representation."
+  ]
+}

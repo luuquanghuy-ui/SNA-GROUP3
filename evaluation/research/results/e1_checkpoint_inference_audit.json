@@ -1,0 +1,45 @@
+{
+  "scope": "Independent inference on Fox8 test accounts from raw NDJSON using delivered TF-IDF vectorizer and model checkpoints; training was not rerun.",
+  "python": "3.11.9",
+  "numpy": "1.26.4",
+  "scikit_learn": "1.8.0",
+  "torch": "2.11.0+cpu",
+  "test_accounts": 456,
+  "models": {
+    "LogisticRegression": {
+      "n_accounts": 456,
+      "prediction_agreement_fraction": 1.0,
+      "max_absolute_probability_difference": 2.0284256496694297e-09
+    },
+    "RandomForest": {
+      "n_accounts": 456,
+      "prediction_agreement_fraction": 1.0,
+      "max_absolute_probability_difference": 0.0
+    },
+    "MLP": {
+      "n_accounts": 456,
+      "prediction_agreement_fraction": 1.0,
+      "max_absolute_probability_difference": 1.1920928955078125e-07
+    }
+  },
+  "status": "inference_predictions_reproduced_not_retraining",
+  "checked_at_utc": "2026-10-26T13:08:54.427610+00:00",
+  "snapshot_commit": "ea772b93115f082f95d377f97f622a94d2239570",
+  "encoder_weights_equal_full_model": true,
+  "artifact_sha256": {
+    "models/logisticregression.joblib": "f4b95a282b388644883fec29d2b3a0a78a02e24fa0ca6853452245157ccc0d16",
+    "models/randomforest.joblib": "652f6152ee46977291d20e2a951e2445ea852fb34eb1ee34378ec9df5193454d",
+    "models/e1_mlp_full_checkpoint.pt": "39a08c0bb51a0aa292ce9023412b36d1f648239929e8ca5bb8341dd3c6e6e81c",
+    "models/e1_behavioral_encoder.pt": "769f6481f94a39ea5937111da14f7b7fa58dd3f9f4905f9772cc3092201da50a",
+    "preprocessing/tfidf_vectorizer.joblib": "c9a0500fe48540d54d09f4cc9b313a5b9ace12c1a1fd60844424671f06adeb43",
+    "evaluation/e1_predictions.csv": "6471a0cd61ca8ed939900fd1a7aa8d9dd5da3924ef279017e2f851a76f696715"
+  },
+  "raw_fox8_sha256": "7e7614aecf0bca8d300b711d18f53c25e4421ce786be39153154f373069b1999",
+  "reference_split_sha256": "e2c912981586eed6716a2176e4f0ab29bcdb977b4199cc865b6d413976b1d893",
+  "verifier_code_sha256": "95bdf35b52d744269ff27332b220500d0b0b74a15614249fc65a8839826d8c8b",
+  "limitations": [
+    "Saved model inference only, not training from scratch or a clean environment rerun.",
+    "Prediction agreement does not remove source-label confounding.",
+    "Float probability differences are recorded separately from exact class agreement."
+  ]
+}

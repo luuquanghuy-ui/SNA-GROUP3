@@ -1,0 +1,358 @@
+{
+  "status": "metrics_verified_inference_passed_protocol_issues",
+  "checked_at_utc": "2026-10-26T17:39:08.270092+00:00",
+  "snapshot_commit": "50619b5cc37652565f14659419d8d12ca2200810",
+  "repository": "https://github.com/luuquanghuy-ui/SNA-GROUP3",
+  "handoff_author": "PThinhL (Le Phuc Thinh), verified from commit metadata; not inferred from folder number",
+  "classification_results": [
+    {
+      "experiment": "E2",
+      "run_id": "e2_scratch_received",
+      "method": "Train from Scratch",
+      "split": "test",
+      "positive_label": "0",
+      "seed": null,
+      "feature_set": "saved_Fox8_TFIDF_10000",
+      "status": "metrics_verified_protocol_revision_needed",
+      "training_rerun_this_audit": false,
+      "source": "E2/artifacts/e2_predictions.csv",
+      "n_accounts": 44938,
+      "n_positive": 373,
+      "n_negative": 44565,
+      "positive_precision": 0.9723926380368099,
+      "positive_recall": 0.8498659517426274,
+      "positive_f1": 0.9070100143061517,
+      "macro_f1": 0.9531405634063699,
+      "accuracy": 0.9985535626863679,
+      "tp": 317,
+      "fp": 9,
+      "tn": 44556,
+      "fn": 56,
+      "average_precision": 0.9233314226627176
+    },
+    {
+      "experiment": "E2",
+      "run_id": "e2_transfer_received",
+      "method": "Fox8-pretrained + Fine-tuning",
+      "split": "test",
+      "positive_label": "0",
+      "seed": null,
+      "feature_set": "saved_Fox8_TFIDF_10000",
+      "status": "metrics_verified_protocol_revision_needed",
+      "training_rerun_this_audit": false,
+      "source": "E2/artifacts/e2_predictions.csv",
+      "n_accounts": 44938,
+      "n_positive": 373,
+      "n_negative": 44565,
+      "positive_precision": 0.9902912621359223,
+      "positive_recall": 0.8203753351206434,
+      "positive_f1": 0.8973607038123167,
+      "macro_f1": 0.9482879488297182,
+      "accuracy": 0.998442298277627,
+      "tp": 306,
+      "fp": 3,
+      "tn": 44562,
+      "fn": 67,
+      "average_precision": 0.9175711723446638
+    },
+    {
+      "experiment": "E2",
+      "run_id": "e2_lr_no_tweet_count_reproduced",
+      "method": "LR (No tweet_count)",
+      "split": "test",
+      "positive_label": "0",
+      "seed": 42,
+      "feature_set": "five_account_statistics_no_tweet_count",
+      "status": "owner_function_reproduced",
+      "training_rerun_this_audit": true,
+      "source": "e2_handoff/lr_ablation_predictions.csv",
+      "n_accounts": 44938,
+      "n_positive": 373,
+      "n_negative": 44565,
+      "positive_precision": 0.08634111818825195,
+      "positive_recall": 0.9812332439678284,
+      "positive_f1": 0.15871639202081528,
+      "macro_f1": 0.5566053343102763,
+      "accuracy": 0.9136588188170368,
+      "tp": 366,
+      "fp": 3873,
+      "tn": 40692,
+      "fn": 7,
+      "average_precision": 0.36881984379706884
+    }
+  ],
+  "neural_metric_checks": [
+    {
+      "item": "scratch_metrics",
+      "status": "report_mismatch",
+      "discrepancies": [
+        {
+          "metric": "positive_precision",
+          "reported": 0.996078431372549,
+          "recomputed": 0.9723926380368099
+        },
+        {
+          "metric": "positive_recall",
+          "reported": 0.6809651474530831,
+          "recomputed": 0.8498659517426274
+        },
+        {
+          "metric": "positive_f1",
+          "reported": 0.8089171974522293,
+          "recomputed": 0.9070100143061517
+        },
+        {
+          "metric": "macro_f1",
+          "reported": 0.9037863147533646,
+          "recomputed": 0.9531405634063699
+        },
+        {
+          "metric": "average_precision",
+          "reported": 0.9204162887541156,
+          "recomputed": 0.9233314226627176
+        }
+      ]
+    },
+    {
+      "item": "transfer_metrics",
+      "status": "report_mismatch",
+      "discrepancies": [
+        {
+          "metric": "positive_precision",
+          "reported": 0.9692307692307692,
+          "recomputed": 0.9902912621359223
+        },
+        {
+          "metric": "positive_recall",
+          "reported": 0.8445040214477212,
+          "recomputed": 0.8203753351206434
+        },
+        {
+          "metric": "positive_f1",
+          "reported": 0.9025787965616046,
+          "recomputed": 0.8973607038123167
+        },
+        {
+          "metric": "macro_f1",
+          "reported": 0.9509081383287962,
+          "recomputed": 0.9482879488297182
+        },
+        {
+          "metric": "average_precision",
+          "reported": 0.91824425351955,
+          "recomputed": 0.9175711723446638
+        }
+      ]
+    }
+  ],
+  "neural_inference": {
+    "scratch": {
+      "n_accounts": 44938,
+      "prediction_agreement_fraction": 1.0,
+      "prediction_mismatches": 0,
+      "max_absolute_probability_difference": 5.410256957993909e-07,
+      "scores_close_rtol_1e_4_atol_1e_5": true
+    },
+    "transfer": {
+      "n_accounts": 44938,
+      "prediction_agreement_fraction": 1.0,
+      "prediction_mismatches": 0,
+      "max_absolute_probability_difference": 3.9121711731260334e-07,
+      "scores_close_rtol_1e_4_atol_1e_5": true
+    }
+  },
+  "neural_inference_passed": true,
+  "lr_ablation_reproduction": [
+    {
+      "method": "LR (Full Features)",
+      "matches_reported_metrics": true,
+      "differences": {
+        "Bad-Precision": 0.0,
+        "Bad-Recall": 0.0,
+        "Bad-F1": 0.0,
+        "Macro-F1": 0.0,
+        "AP": 0.0
+      },
+      "n_accounts": 44938,
+      "n_positive": 373,
+      "n_negative": 44565,
+      "positive_precision": 0.08913097301312206,
+      "positive_recall": 0.9651474530831099,
+      "positive_f1": 0.1631912964641886,
+      "macro_f1": 0.5599959103307557,
+      "accuracy": 0.9178423605856958,
+      "tp": 360,
+      "fp": 3679,
+      "tn": 40886,
+      "fn": 13,
+      "average_precision": 0.4711636508902377
+    },
+    {
+      "method": "LR (No tweet_count)",
+      "matches_reported_metrics": true,
+      "differences": {
+        "Bad-Precision": 0.0,
+        "Bad-Recall": 0.0,
+        "Bad-F1": 0.0,
+        "Macro-F1": 0.0,
+        "AP": 0.0
+      },
+      "n_accounts": 44938,
+      "n_positive": 373,
+      "n_negative": 44565,
+      "positive_precision": 0.08634111818825195,
+      "positive_recall": 0.9812332439678284,
+      "positive_f1": 0.15871639202081528,
+      "macro_f1": 0.5566053343102763,
+      "accuracy": 0.9136588188170368,
+      "tp": 366,
+      "fp": 3873,
+      "tn": 40692,
+      "fn": 7,
+      "average_precision": 0.36881984379706884
+    }
+  ],
+  "deltas": [
+    {
+      "metric": "positive_precision",
+      "scratch": 0.9723926380368099,
+      "transfer": 0.9902912621359223,
+      "transfer_minus_scratch": 0.01789862409911247,
+      "difference_percentage_points": 1.789862409911247
+    },
+    {
+      "metric": "positive_recall",
+      "scratch": 0.8498659517426274,
+      "transfer": 0.8203753351206434,
+      "transfer_minus_scratch": -0.029490616621983934,
+      "difference_percentage_points": -2.9490616621983934
+    },
+    {
+      "metric": "positive_f1",
+      "scratch": 0.9070100143061517,
+      "transfer": 0.8973607038123167,
+      "transfer_minus_scratch": -0.009649310493834995,
+      "difference_percentage_points": -0.9649310493834995
+    },
+    {
+      "metric": "macro_f1",
+      "scratch": 0.9531405634063699,
+      "transfer": 0.9482879488297182,
+      "transfer_minus_scratch": -0.004852614576651648,
+      "difference_percentage_points": -0.4852614576651648
+    },
+    {
+      "metric": "average_precision",
+      "scratch": 0.9233314226627176,
+      "transfer": 0.9175711723446638,
+      "transfer_minus_scratch": -0.005760250318053828,
+      "difference_percentage_points": -0.5760250318053828
+    }
+  ],
+  "protocol_issues": [
+    {
+      "severity": "major",
+      "item": "BCE class weighting",
+      "finding": "Targets keep Good=1, Bad=0; BCE pos_weight=119.42802450229709 multiplies Good loss, not Bad loss.",
+      "action": "Owner must justify this objective or correct class weighting/remap explicitly and rerun both paired models; evaluation does not modify the loss."
+    },
+    {
+      "severity": "major",
+      "item": "Validation/checkpoint selection",
+      "finding": "val_df exists, but the delivered neural training function uses fixed 10 epochs without validation evaluation or validation-selected checkpoint.",
+      "action": "Provide protocol-approved fixed-budget justification or validation checkpoint selection evidence; do not infer Test tuning solely from missing validation."
+    },
+    {
+      "severity": "major",
+      "item": "Neural seed metadata",
+      "finding": "No torch.manual_seed/np.random.seed call in delivered notebook; LR random_state=42 is not a seed for neural initialization or DataLoader shuffle. Config omits neural seed.",
+      "action": "Owner should provide the actual run seed/environment/log or rerun both models with recorded seeds."
+    },
+    {
+      "severity": "report",
+      "item": "Label semantics",
+      "finding": "E2 report equates Bad with Bot and Good with Human; Honduras labels do not establish that equivalence.",
+      "action": "Use Bad/Good consistently."
+    },
+    {
+      "severity": "report",
+      "item": "Overstated improvement",
+      "finding": "Current Transfer-minus-Scratch deltas: positive_precision +1.789862 pp; positive_recall -2.949062 pp; positive_f1 -0.964931 pp; macro_f1 -0.485261 pp; average_precision -0.576025 pp. One paired run is not general transfer evidence.",
+      "action": "Report metric-specific trade-offs and percentage points; qualify conclusions by this run and protocol issues."
+    },
+    {
+      "severity": "handoff",
+      "item": "Artifact paths/export provenance",
+      "finding": "Report lists evaluation/e2_predictions_e1_emb.csv, preprocessing/scaler_e1_emb.joblib and models/model_*_e2.pt, while actual Git files are artifacts/e2_predictions.csv and artifacts/e2_*_model.pt. Export cells are absent from the received notebook.",
+      "action": "Point handoff documentation to actual files; provide export/config generation code and any additional Drive-only artifacts."
+    }
+  ],
+  "official_comparison_eligible": false,
+  "encoder_tensors_changed_from_E1": {
+    "scratch": {
+      "0.weight": true,
+      "0.bias": true,
+      "3.weight": true,
+      "3.bias": true
+    },
+    "transfer": {
+      "0.weight": true,
+      "0.bias": true,
+      "3.weight": true,
+      "3.bias": true
+    }
+  },
+  "embedding_CSV_used_as_neural_input": false,
+  "input_recipe": "First 30 valid raw tweets per account, cap joined text at 5000 chars, transform saved E1 TF-IDF; no E1 CSV embeddings or feature scaler for neural input",
+  "artifact_evidence": {
+    "E2/E2_Honduras.ipynb": {
+      "sha256": "6593cdca3f82dac21724cd90504a011e1ad0c654e41b6c9ce96d890f28c49813",
+      "bytes": 35273
+    },
+    "E2/artifacts/e2_config.json": {
+      "sha256": "ce08d12ecf8075a65a13e68e2169db691f48a36c197d19d7a2df6870900e0baa",
+      "bytes": 251
+    },
+    "E2/e2_results_report.md": {
+      "sha256": "b476c8153eb72832cdca13679ca123cd17c5e7b0a31c0bab09cb978e53cd9be6",
+      "bytes": 5822
+    },
+    "E2/artifacts/e2_predictions.csv": {
+      "sha256": "29a7237b66c1bea48b25a8d9ecdf569b63d299b42d194c075588c23878132124",
+      "bytes": 1837756
+    },
+    "E2/evaluation/E2_RESULTS_TABLE.csv": {
+      "sha256": "373d8a06e9102555afb92b96289ce968f617d9779cb982d407821d2b371b0a78",
+      "bytes": 520
+    },
+    "E2/artifacts/e2_scratch_model.pt": {
+      "sha256": "8a994d3f3a2614f0abb5e7c4d762146c31af1656d7ed70b2cedc19a119cf5b96",
+      "bytes": 10409931
+    },
+    "E2/artifacts/e2_transfer_model.pt": {
+      "sha256": "442c6a0523d19ae3d93b79d3f2b3488c2731aadcc9911dc5e820fd9de527cd95",
+      "bytes": 10409945
+    },
+    "Fox8 baseline bot detection/preprocessing/tfidf_vectorizer.joblib": {
+      "sha256": "c9a0500fe48540d54d09f4cc9b313a5b9ace12c1a1fd60844424671f06adeb43",
+      "bytes": 337917
+    },
+    "Fox8 baseline bot detection/models/e1_behavioral_encoder.pt": {
+      "sha256": "769f6481f94a39ea5937111da14f7b7fa58dd3f9f4905f9772cc3092201da50a",
+      "bytes": 10375465
+    }
+  },
+  "local_input_sha256": {
+    "D:\\mxhui\\nguoi0\\processed-20261018T032211Z-1-001\\processed\\honduras_account_splits.csv": "8f2cea8189746dc8c9d258addd95cbabdf68d59b239bc83b6057e05df77b2e83",
+    "D:\\mxhui\\nguoi 1\\honduras_features.csv": "011c2c50fad29bffe2642f4701d45f2602c86edf50eead64ba887292a1e0cbd9",
+    "D:\\mxhui\\honduras-bad-anonymized": "40ce969012920d320c38f257a9c27ad893a08010a78ae2269926cf5c9cc9c0bd",
+    "D:\\mxhui\\honduras-good-anonymized": "c6964d9500e5bed5706c23cf3b66a774a8f85d316df285b1ea5b5937dcbbd560"
+  },
+  "limitations": [
+    "No neural retraining performed; only saved-checkpoint inference replayed on full Test.",
+    "LR ablation executed the owner's function unchanged, with input paths supplied locally.",
+    "Fine-tuning initialization is supported by notebook code; final changed weights alone cannot prove complete training history.",
+    "Role numbering may have changed. This audit assigns ownership by commit author and artifacts, not by local folder number."
+  ],
+  "lr_ablation_predictions_sha256": "1008f37a87953f68c711a954af703b3fb4d8b9a9be6feb8529ae7d539f3d2438"
+}
