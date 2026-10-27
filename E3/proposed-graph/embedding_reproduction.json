@@ -1,0 +1,12 @@
+{
+  "scratch": {
+    "n_compared": 44938,
+    "max_abs_error": 1.049041748046875e-05,
+    "allclose": true
+  },
+  "transfer": {
+    "n_compared": 44938,
+    "max_abs_error": 8.58306884765625e-06,
+    "allclose": true
+  }
+}

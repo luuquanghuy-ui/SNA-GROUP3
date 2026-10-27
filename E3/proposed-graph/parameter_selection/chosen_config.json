@@ -1,0 +1,10 @@
+{
+  "lambda": 0.5,
+  "top_k": 5,
+  "cosine_threshold": 0.9,
+  "status": "selected_on_validation_structure_with_neutral_lambda_design",
+  "weight_normalization": "each undirected graph divided by its total positive edge-weight sum",
+  "selection_artifact": "/content/drive/MyDrive/Colab Notebooks/E3_proposed_outputs/parameter_selection/PARAMETER_SELECTION.md",
+  "selection_uses_labels": false,
+  "scope": "full_corpus_descriptive_transductive"
+}

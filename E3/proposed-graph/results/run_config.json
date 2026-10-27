@@ -1,0 +1,51 @@
+{
+  "config": {
+    "seed": 42,
+    "resolution": 1.0,
+    "leiden_iterations": -1,
+    "efConstruction": 80,
+    "efSearch": 128,
+    "backend": "igraph_leidenalg_cpu",
+    "ann": "FAISS HNSW32 CPU",
+    "lambda": 0.5,
+    "top_k": 5,
+    "cosine_threshold": 0.9,
+    "status": "selected_on_validation_structure_with_neutral_lambda_design",
+    "weight_normalization": "each undirected graph divided by its total positive edge-weight sum",
+    "selection_artifact": "/content/drive/MyDrive/Colab Notebooks/E3_proposed_outputs/parameter_selection/PARAMETER_SELECTION.md",
+    "selection_uses_labels": false,
+    "scope": "full_corpus_descriptive_transductive",
+    "baseline_normalization": "divide by positive undirected edge-weight sum"
+  },
+  "reproduction": {
+    "scratch": {
+      "n_compared": 44938,
+      "max_abs_error": 1.049041748046875e-05,
+      "allclose": true
+    },
+    "transfer": {
+      "n_compared": 44938,
+      "max_abs_error": 8.58306884765625e-06,
+      "allclose": true
+    }
+  },
+  "baseline_prior_reproduction_ari": 1.0,
+  "input_sha256": {
+    "/content/drive/.shortcut-targets-by-id/1smhryMDPPwx6_YEONRoCi1O3pXOWWqDK/E3_graph_baselines/combined/edges.csv": "12eb83781a0c5b272fe7db34b0946abd52546a6890c6866110937d3cde7b2e5e",
+    "/content/drive/.shortcut-targets-by-id/1smhryMDPPwx6_YEONRoCi1O3pXOWWqDK/E3_graph_baselines/combined/nodes.csv": "a867fa5c02fb3d878238935e879600888a8488ed67a1df5c2b9094851de3bea5",
+    "/content/drive/.shortcut-targets-by-id/1smhryMDPPwx6_YEONRoCi1O3pXOWWqDK/E3_graph_baselines/combined/config.json": "dd496adfed3643aa0467fac9e936402c71b7368130b4948ec5cfd2770243cb7f",
+    "/content/drive/.shortcut-targets-by-id/1a-d0mg6HVFAD7YLbdD4jInZwno5eG0t_/MXH_Output_Ng2/preprocessing/tfidf_vectorizer.joblib": "c9a0500fe48540d54d09f4cc9b313a5b9ace12c1a1fd60844424671f06adeb43",
+    "/content/drive/.shortcut-targets-by-id/1IxeYUgEjfuY2x3eMA83OCFgspwOvq3iD/E2_Output/artifacts/e2_scratch_model.pt": "8a994d3f3a2614f0abb5e7c4d762146c31af1656d7ed70b2cedc19a119cf5b96",
+    "/content/drive/.shortcut-targets-by-id/1IxeYUgEjfuY2x3eMA83OCFgspwOvq3iD/E2_Output/artifacts/e2_transfer_model.pt": "442c6a0523d19ae3d93b79d3f2b3488c2731aadcc9911dc5e820fd9de527cd95"
+  },
+  "packages": {
+    "numpy": "2.1.3",
+    "pandas": "2.2.3",
+    "torch": "2.11.0+cpu",
+    "scipy": "1.16.3",
+    "scikit-learn": "1.6.1",
+    "faiss-cpu": "1.15.1",
+    "igraph": "1.0.0",
+    "leidenalg": "0.12.0"
+  }
+}

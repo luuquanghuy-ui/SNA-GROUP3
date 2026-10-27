@@ -1,0 +1,4 @@
+E3/proposed-graph/scratch_embeddings.npy filter=lfs diff=lfs merge=lfs -text
+E3/proposed-graph/transfer_embeddings.npy filter=lfs diff=lfs merge=lfs -text
+E3/proposed-graph/results/baseline_plus_scratch/edges.csv filter=lfs diff=lfs merge=lfs -text
+E3/proposed-graph/results/baseline_plus_transfer/edges.csv filter=lfs diff=lfs merge=lfs -text
