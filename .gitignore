@@ -219,3 +219,13 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 Fox8 baseline bot detection/honduras_e1_embeddings.csv
+
+# Local Python environments
+.venv-bertweet/
+.venv-minilm/
+Twibot-20/.venv*/
+
+# E1 intermediate data
+Twibot-20/e1_outputs/e1_handoff/cache/
+Twibot-20/e1_outputs/e1_handoff/data/
+Twibot-20/e1_outputs/e1_handoff/tokenizer/
