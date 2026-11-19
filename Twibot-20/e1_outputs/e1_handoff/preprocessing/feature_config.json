@@ -1,0 +1,32 @@
+{
+  "numeric_fields": [
+    "followers_count",
+    "friends_count",
+    "statuses_count",
+    "favourites_count",
+    "listed_count"
+  ],
+  "boolean_fields": [
+    "verified",
+    "protected",
+    "geo_enabled",
+    "default_profile",
+    "default_profile_image",
+    "has_extended_profile",
+    "profile_use_background_image",
+    "contributors_enabled",
+    "is_translator",
+    "is_translation_enabled"
+  ],
+  "numeric_transform": "log1p then StandardScaler fitted on train only",
+  "neighbor_limit": 5,
+  "neighbor_aggregation": "mean pooling, following and follower separately",
+  "tweet_embedding_dim": 384,
+  "profile_text_embedding_dim": 384,
+  "profile_numeric_boolean_dim": 15,
+  "neighbor_embedding_dim": 768,
+  "label_mapping": {
+    "Human": 0,
+    "Bot": 1
+  }
+}
