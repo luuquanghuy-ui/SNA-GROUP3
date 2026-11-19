@@ -1,0 +1,48 @@
+{
+  "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "model_revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+  "device": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+  "batch_size_tweets": 128,
+  "inference_dtype": "float16",
+  "embedding_dtype": "float32",
+  "versions": {
+    "python": "3.11.9",
+    "numpy": "1.26.4",
+    "torch": "2.5.1+cu121",
+    "transformers": "5.12.1"
+  },
+  "embedding_dim": 384,
+  "label_mapping": {
+    "0": "Bad",
+    "1": "Good"
+  },
+  "split_names": [
+    "train",
+    "validation",
+    "test"
+  ],
+  "account_order": "manifest CSV row order",
+  "id_contract": "decimal strings, never parsed as floating-point",
+  "max_tweets_per_account": 5,
+  "max_tokens_per_tweet": 128,
+  "selection": "evenly spaced inclusive indices in normalized JSONL order after cleaning",
+  "pooling": "attention-masked token mean, then mean of tweet vectors without L2 normalization",
+  "duplicate_policy": "Keep first same-ID occurrence if account and stripped text agree, including metadata-only conflicts. Exclude all occurrences if account or text conflicts. Exclude whitespace-normalized exact text present in multiple splits and collapse repeated content within each account.",
+  "missing_text_policy": "keep account with an all-zero vector",
+  "e1_handoff": {
+    "feature_config_sha256": "fdf882b68248675d923b5d0f10a06f833679baf81ecef13977d24f616a4216ea",
+    "checkpoint_sha256": "219c21ca894c6ea4bcd8a4ac009f0383880892aa0df665795e0ef8f880ce7394",
+    "checkpoint_use": "downstream transfer initialization only"
+  },
+  "input_sha256": {
+    "honduras_account_manifest.csv": "21a6ea3726de91471bebc68229a0c2e1ced661b4370552df207aa3f590f7a484",
+    "honduras_account_splits.csv": "8f2cea8189746dc8c9d258addd95cbabdf68d59b239bc83b6057e05df77b2e83",
+    "honduras_train_ids.csv": "ab446d9329e10520a981a92f73906280aa413e8c66244e2e3d65bfe4dc5fd707",
+    "honduras_validation_ids.csv": "c74c2157bbefe62d9f41320d4cc97f6092ed5bc98239c829971d087848e64a3e",
+    "honduras_test_ids.csv": "68597b9bb144a879865227f07920449662dfb973a4ea24aeb037fdacac201e63",
+    "honduras_bad_normalized.jsonl": "95c3678bb2741ec683393ae84eb291fbe1a9756236f6b047cdb6b0bc4b1244e6",
+    "honduras_good_normalized.jsonl": "0d6d9df7daa71a47d6a74edd48f2dbdb025f9985e9245d31f2e1b1e9e1a533fe",
+    "group_a_exact_duplicate_candidates.csv": "c72d45d2b0844cf25aced213105da0efad534dfe251d10897762c3eba656da3c",
+    "group_b_metadata_conflicts.csv": "33136182c6b213f63fc8d229486079e605e6d07fca4d5347e7f095a538a084b5"
+  }
+}
