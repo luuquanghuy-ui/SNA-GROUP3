@@ -1,0 +1,77 @@
+{
+  "normalized_rows": {
+    "honduras_bad_normalized.jsonl": 137252,
+    "honduras_good_normalized.jsonl": 1125578
+  },
+  "duplicate_and_text_audit": {
+    "group_a_audited_ids": 5259,
+    "group_a_count_mismatches": 0,
+    "group_a_conflicting_ids_excluded": 0,
+    "group_a_safe_duplicate_ids": 5259,
+    "group_b_audited_ids": 4,
+    "group_b_count_mismatches": 0,
+    "group_b_conflicting_ids_excluded": 4,
+    "group_b_safe_duplicate_ids": 0,
+    "duplicate_rows_collapsed": 7282,
+    "conflicting_ids_excluded": 390,
+    "conflicting_rows_excluded": 1364,
+    "conflicting_ids_outside_audit": 386,
+    "cross_split_text_groups_excluded": 34474,
+    "cross_split_tweet_rows_excluded": 959205,
+    "repeated_text_within_account_excluded": 19771
+  },
+  "accounts": 224685,
+  "labels_by_split": {
+    "train": {
+      "Good": 155973,
+      "Bad": 1306
+    },
+    "validation": {
+      "Good": 22281,
+      "Bad": 187
+    },
+    "test": {
+      "Good": 44565,
+      "Bad": 373
+    }
+  },
+  "accounts_without_selected_tweets_by_split": {
+    "train": {
+      "Good": 121727,
+      "Bad": 97
+    },
+    "validation": {
+      "Good": 18812,
+      "Bad": 15
+    },
+    "test": {
+      "Good": 37182,
+      "Bad": 28
+    }
+  },
+  "selected_tweet_count_distribution": {
+    "0": 177861,
+    "1": 29595,
+    "2": 6291,
+    "3": 2796,
+    "4": 1591,
+    "5": 6551
+  },
+  "manifest_split_and_id_files_match": true,
+  "normalized_account_and_label_coverage_matches_manifest": true,
+  "status": "passed",
+  "shape": [
+    224685,
+    384
+  ],
+  "metadata_rows_verified": 224685,
+  "all_finite": true,
+  "zero_vector_rows": 177861,
+  "zero_vectors_match_accounts_without_tweets": true,
+  "artifact_sha256": {
+    "honduras_tweet_embeddings.npy": "b39f025f0ec06f43149be043cafc0dade0a27aea1bb6440129427036931bc542",
+    "honduras_labels.npy": "00b50086dc42438ccefce15114d1d6294b5a38a89b87b221a0cf8a8e3d6be4fd",
+    "honduras_split_names.npy": "6c9d9cc4e442a9009050b8eec087dbab77647ba5cc33ffcbeb2a161fdaf4046f",
+    "honduras_account_metadata.csv": "9b3d4e18d7887d6a8a86af40c589338abeeaeea18eea7dd2b3c77090929c069d"
+  }
+}
