@@ -1,0 +1,99 @@
+{
+  "member": 3,
+  "task": "E3 Interaction Graph Construction",
+  "canonical_data": {
+    "accounts": 224685,
+    "label_counts": {
+      "0": 1866,
+      "1": 222819
+    },
+    "split_counts": {
+      "train": 157279,
+      "test": 44938,
+      "validation": 22468
+    },
+    "bad_file": "/content/drive/MyDrive/MXH/processed/honduras_bad_normalized.jsonl",
+    "good_file": "/content/drive/MyDrive/MXH/processed/honduras_good_normalized.jsonl"
+  },
+  "tv1_handoff": {
+    "config_found": true,
+    "validation_found": true,
+    "duplicate_policy": "Keep first same-ID occurrence if account and stripped text agree, including metadata-only conflicts. Exclude all occurrences if account or text conflicts. Exclude whitespace-normalized exact text present in multiple splits and collapse repeated content within each account.",
+    "embedding_shape": [
+      224685,
+      384
+    ],
+    "zero_vector_rows": 177861
+  },
+  "normalized_jsonl_audit": {
+    "rows_total": 1262830,
+    "rows_invalid": 0,
+    "files": {
+      "honduras_bad_normalized.jsonl": 137252,
+      "honduras_good_normalized.jsonl": 1125578
+    },
+    "accounts_seen": 224685,
+    "canonical_accounts": 224685,
+    "duplicate_tweet_ids": 5649,
+    "duplicate_extra_rows": 8256,
+    "conflicting_tweet_ids": 390,
+    "safe_tweet_author_mappings": 1254184,
+    "nonnull_interaction_fields": {}
+  },
+  "structured_interaction_stats": {
+    "rows_skipped_conflict_id": 1364,
+    "rows_skipped_duplicate_id": 7282
+  },
+  "neighbor_audit": {
+    "available": true,
+    "auto_merge_allowed": false,
+    "parse_errors": 0,
+    "raw_relation_references": 208716,
+    "neighbor_target_accounts": 11826,
+    "target_accounts_in_honduras": 93,
+    "target_overlap_ratio": 0.007864028411973617,
+    "all_neighbor_or_target_ids": 191582,
+    "all_ids_in_honduras": 897,
+    "canonical_honduras_overlap_edges": 146,
+    "expanded_directed_edges": 208381,
+    "split_compared": 93,
+    "split_matches": 45,
+    "split_agreement": 0.4838709677419355
+  },
+  "support_audit": {
+    "available": true,
+    "parse_errors": 0,
+    "support_accounts_found": 179756,
+    "external_neighbor_ids": 179756,
+    "external_neighbor_support_missing": 0,
+    "extra_support_records": 0,
+    "non_honduras_neighbor_target_accounts": 11733
+  },
+  "graph_metrics": {
+    "canonical_nodes": 224685,
+    "directed_edges": 0,
+    "undirected_edges": 0,
+    "isolates": 224685,
+    "isolate_rate": 1.0,
+    "connected_components": 224685,
+    "largest_connected_component": 1,
+    "mean_undirected_degree": 0.0,
+    "median_undirected_degree": 0.0,
+    "max_undirected_degree": 0,
+    "labels_used_for_edge_construction": false
+  },
+  "expanded_neighbor_report": {
+    "nodes_if_union_with_honduras": 415370,
+    "neighbor_directed_edges": 208381,
+    "external_support_profiles": 179756,
+    "graphml_exported": false
+  },
+  "handoff_status": "BLOCKED_NO_VALIDATED_INTERACTION_EDGES",
+  "method_notes": [
+    "Label Bad/Good is metadata only and is not used to create edges.",
+    "No retweet/reply/quote relation is inferred from raw tweet text.",
+    "Conflicting tweet IDs are excluded; exact duplicate IDs keep the first safe occurrence.",
+    "Cross-split exact-text exclusion from E2 is not applied to structured interaction metadata.",
+    "Neighbor data is only auto-merged if provenance overlap and split agreement thresholds pass."
+  ]
+}
