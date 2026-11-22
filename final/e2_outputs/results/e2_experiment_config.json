@@ -1,0 +1,91 @@
+{
+    "experiment": "E2_Honduras_Transfer_Learning",
+    "task": "Bad_vs_Good_Account_Classification",
+    "dataset": {
+        "name": "Honduras",
+        "total_accounts_before_filtering": 224685,
+        "primary_cohort": "Accounts with selected_tweet_count > 0",
+        "primary_cohort_size": 46824,
+        "label_mapping": {
+            "0": "Bad",
+            "1": "Good"
+        },
+        "split": {
+            "train": {
+                "Bad": 1209,
+                "Good": 34246,
+                "Total": 35455
+            },
+            "validation": {
+                "Bad": 172,
+                "Good": 3469,
+                "Total": 3641
+            },
+            "test": {
+                "Bad": 345,
+                "Good": 7383,
+                "Total": 7728
+            }
+        }
+    },
+    "input": {
+        "feature": "Honduras Tweet Embedding",
+        "dimension": 384,
+        "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    },
+    "architecture": {
+        "tweet_branch": [
+            "Linear(384, 128)",
+            "LayerNorm(128)",
+            "GELU",
+            "Dropout(0.3)"
+        ],
+        "classifier": "Linear(128, 2)"
+    },
+    "configurations": [
+        "scratch",
+        "transfer",
+        "frozen_transfer"
+    ],
+    "transfer_source": {
+        "checkpoint": "best_model.pt",
+        "sha256": "219c21ca894c6ea4bcd8a4ac009f0383880892aa0df665795e0ef8f880ce7394",
+        "transferred_component": "E1 Tweet Branch only"
+    },
+    "training": {
+        "seeds": [
+            42,
+            52,
+            62
+        ],
+        "batch_size": 128,
+        "optimizer": "AdamW",
+        "learning_rate": 0.0002,
+        "weight_decay": 0.01,
+        "max_epochs": 30,
+        "early_stopping_patience": 5,
+        "loss": "Weighted Cross Entropy",
+        "class_weights": [
+            3.8292224407196045,
+            0.7194801568984985
+        ],
+        "checkpoint_selection": "Highest Validation Macro-F1; tie-break by lower Validation Loss"
+    },
+    "evaluation": {
+        "validation": "Used for checkpoint selection",
+        "test": "Used for final evaluation only",
+        "metrics": [
+            "Accuracy",
+            "Macro Precision",
+            "Macro Recall",
+            "Macro F1",
+            "Bad Precision",
+            "Bad Recall",
+            "Bad F1",
+            "Bad Average Precision"
+        ],
+        "positive_class_for_bad_metrics": 0,
+        "summary": "Mean and sample standard deviation (ddof=1) across 3 seeds"
+    },
+    "scope_limitation": "Results apply only to accounts with at least one selected tweet, not all 224685 Honduras accounts."
+}
