@@ -1,0 +1,109 @@
+{
+  "Graph_A_Baseline": {
+    "graph": "Graph_A_Baseline",
+    "total_nodes_in_corpus": 224685,
+    "total_bad_in_corpus": 1866,
+    "baseline_bad_rate": 0.008304960277722144,
+    "bad_nodes_with_edges": 0,
+    "bad_edge_coverage": 0.0,
+    "max_community_size": 0,
+    "median_community_size": 0.0,
+    "communities_with_bad_gt_0": 0,
+    "communities_enrichment_gt_1": 0,
+    "top10_largest_communities": []
+  },
+  "Graph_B_Augmented": {
+    "graph": "Graph_B_Augmented",
+    "total_nodes_in_corpus": 224685,
+    "total_bad_in_corpus": 1866,
+    "baseline_bad_rate": 0.008304960277722144,
+    "bad_nodes_with_edges": 1502,
+    "bad_edge_coverage": 0.804930332261522,
+    "max_community_size": 177522,
+    "median_community_size": 2.0,
+    "communities_with_bad_gt_0": 17,
+    "communities_enrichment_gt_1": 13,
+    "top10_largest_communities": [
+      {
+        "comm": 0,
+        "size": 177522,
+        "bad_count": 139,
+        "bad_ratio": 0.0007830015434706684,
+        "bad_coverage": 0.0744908896034298,
+        "bad_enrichment": 0.09428119067240467
+      },
+      {
+        "comm": 1,
+        "size": 20547,
+        "bad_count": 31,
+        "bad_ratio": 0.0015087360685258188,
+        "bad_coverage": 0.016613076098606645,
+        "bad_enrichment": 0.18166686149878006
+      },
+      {
+        "comm": 2,
+        "size": 6170,
+        "bad_count": 1305,
+        "bad_ratio": 0.21150729335494328,
+        "bad_coverage": 0.6993569131832797,
+        "bad_enrichment": 25.467586391991123
+      },
+      {
+        "comm": 3,
+        "size": 392,
+        "bad_count": 0,
+        "bad_ratio": 0.0,
+        "bad_coverage": 0.0,
+        "bad_enrichment": 0.0
+      },
+      {
+        "comm": 4,
+        "size": 339,
+        "bad_count": 1,
+        "bad_ratio": 0.0029498525073746312,
+        "bad_coverage": 0.0005359056806002144,
+        "bad_enrichment": 0.35519164556241645
+      },
+      {
+        "comm": 5,
+        "size": 205,
+        "bad_count": 1,
+        "bad_ratio": 0.004878048780487805,
+        "bad_coverage": 0.0005359056806002144,
+        "bad_enrichment": 0.5873656968080935
+      },
+      {
+        "comm": 6,
+        "size": 119,
+        "bad_count": 1,
+        "bad_ratio": 0.008403361344537815,
+        "bad_coverage": 0.0005359056806002144,
+        "bad_enrichment": 1.0118484692912535
+      },
+      {
+        "comm": 7,
+        "size": 74,
+        "bad_count": 0,
+        "bad_ratio": 0.0,
+        "bad_coverage": 0.0,
+        "bad_enrichment": 0.0
+      },
+      {
+        "comm": 8,
+        "size": 38,
+        "bad_count": 0,
+        "bad_ratio": 0.0,
+        "bad_coverage": 0.0,
+        "bad_enrichment": 0.0
+      },
+      {
+        "comm": 9,
+        "size": 37,
+        "bad_count": 0,
+        "bad_ratio": 0.0,
+        "bad_coverage": 0.0,
+        "bad_enrichment": 0.0
+      }
+    ]
+  }
+}

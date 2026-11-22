@@ -229,3 +229,4 @@ Twibot-20/.venv*/
 Twibot-20/e1_outputs/e1_handoff/cache/
 Twibot-20/e1_outputs/e1_handoff/data/
 Twibot-20/e1_outputs/e1_handoff/tokenizer/
+**/sim_edges_*.npz
