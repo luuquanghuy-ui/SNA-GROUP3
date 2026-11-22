@@ -1,0 +1,40 @@
+{
+  "config": {
+    "top_k": 5,
+    "sim_threshold": 0.9,
+    "lambda_blend": 0.5,
+    "leiden_resolution": 1.0,
+    "leiden_seed": 42,
+    "leiden_iterations": -1,
+    "batch_size": 4096,
+    "run_equal_edge_control": true,
+    "use_cached_128d": true,
+    "use_cached_sim_edges": true,
+    "use_auxiliary_neighbor_if_empty": false
+  },
+  "graph_a_source": "interaction_edges.csv",
+  "graph_b_blend_mode": "similarity_only_due_to_empty_graph_a",
+  "Graph_A_Baseline": {
+    "num_nodes": 224685,
+    "num_edges": 0,
+    "density": 0.0,
+    "active_nodes": 0,
+    "isolated_nodes": 224685,
+    "isolate_rate": 1.0,
+    "lcc_size": 0,
+    "num_communities": 0,
+    "weighted_modularity": 0.0
+  },
+  "Graph_B_Augmented": {
+    "num_nodes": 224685,
+    "num_edges": 995347,
+    "density": 3.943286034965379e-05,
+    "active_nodes": 211733,
+    "isolated_nodes": 12952,
+    "isolate_rate": 0.05764514765115606,
+    "lcc_size": 177861,
+    "num_communities": 2084,
+    "weighted_modularity": 0.19762695938151736
+  },
+  "ARI_GraphB_vs_GraphA_on_A_active": null
+}
