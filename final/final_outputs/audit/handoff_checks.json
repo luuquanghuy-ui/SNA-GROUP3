@@ -1,0 +1,75 @@
+{
+  "e2_checkpoint_selection": [
+    {
+      "configuration": "scratch",
+      "seed": 42,
+      "history_best_epoch": 28,
+      "reported_epoch": 28,
+      "match": true
+    },
+    {
+      "configuration": "transfer",
+      "seed": 42,
+      "history_best_epoch": 22,
+      "reported_epoch": 22,
+      "match": true
+    },
+    {
+      "configuration": "frozen_transfer",
+      "seed": 42,
+      "history_best_epoch": 13,
+      "reported_epoch": 13,
+      "match": true
+    },
+    {
+      "configuration": "scratch",
+      "seed": 52,
+      "history_best_epoch": 14,
+      "reported_epoch": 14,
+      "match": true
+    },
+    {
+      "configuration": "transfer",
+      "seed": 52,
+      "history_best_epoch": 14,
+      "reported_epoch": 14,
+      "match": true
+    },
+    {
+      "configuration": "frozen_transfer",
+      "seed": 52,
+      "history_best_epoch": 22,
+      "reported_epoch": 22,
+      "match": true
+    },
+    {
+      "configuration": "scratch",
+      "seed": 62,
+      "history_best_epoch": 12,
+      "reported_epoch": 12,
+      "match": true
+    },
+    {
+      "configuration": "transfer",
+      "seed": 62,
+      "history_best_epoch": 15,
+      "reported_epoch": 15,
+      "match": true
+    },
+    {
+      "configuration": "frozen_transfer",
+      "seed": 62,
+      "history_best_epoch": 29,
+      "reported_epoch": 29,
+      "match": true
+    }
+  ],
+  "e3_edge_validation": {
+    "nodes": 224685,
+    "edges": 106061,
+    "invalid_endpoints": 0,
+    "duplicate_edges": 0,
+    "self_loops": 0,
+    "membership_matches_active": true
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "e1_features": {
+    "account_tweet_embeddings": {
+      "shape": [
+        11826,
+        384
+      ],
+      "all_finite": true,
+      "all_zero_rows": 80
+    },
+    "account_profile_embeddings": {
+      "shape": [
+        11826,
+        384
+      ],
+      "all_finite": true,
+      "all_zero_rows": 0
+    },
+    "profile_numeric_boolean": {
+      "shape": [
+        11826,
+        15
+      ],
+      "all_finite": true,
+      "all_zero_rows": 0
+    },
+    "neighbor_aggregated_embeddings": {
+      "shape": [
+        11826,
+        768
+      ],
+      "all_finite": true,
+      "all_zero_rows": 1273
+    }
+  },
+  "e2_features": {
+    "honduras_tweet_embeddings": {
+      "shape": [
+        224685,
+        384
+      ],
+      "all_finite": true,
+      "all_zero_rows": 177861
+    }
+  },
+  "e1_split_label_counts": {
+    "dev": {
+      "0": 1062,
+      "1": 1303
+    },
+    "test": {
+      "1": 640,
+      "0": 543
+    },
+    "train": {
+      "0": 3632,
+      "1": 4646
+    }
+  },
+  "e2_split_label_counts": {
+    "test": {
+      "1": 44565,
+      "0": 373
+    },
+    "train": {
+      "1": 155973,
+      "0": 1306
+    },
+    "validation": {
+      "1": 22281,
+      "0": 187
+    }
+  }
+}

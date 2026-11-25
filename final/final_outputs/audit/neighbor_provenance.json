@@ -1,0 +1,21 @@
+{
+  "e1_selected_neighbor_profiles_also_labeled_in_split": {
+    "train": {
+      "train": 0,
+      "dev": 0,
+      "test": 0
+    },
+    "dev": {
+      "train": 0,
+      "dev": 0,
+      "test": 0
+    },
+    "test": {
+      "train": 0,
+      "dev": 0,
+      "test": 0
+    }
+  },
+  "support_profile_count": 179756,
+  "note": "Counts are unique IDs per query split and include only selected IDs with support records. Profile reuse is distinct from direct label use."
+}

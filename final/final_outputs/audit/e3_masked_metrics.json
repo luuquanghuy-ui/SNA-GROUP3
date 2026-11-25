@@ -1,0 +1,17 @@
+{
+  "nodes": 224685,
+  "eligible": 46824,
+  "edges": 106061,
+  "active": 33874,
+  "isolated": 190811,
+  "isolate_rate": 0.8492378218394642,
+  "communities": 2137,
+  "largest_community": 3577,
+  "largest_component": 28164,
+  "modularity": 0.8191160384325818,
+  "bad_active": 1362,
+  "bad_total": 1866,
+  "eligible_bad": 1726,
+  "graph_a_edges": 0,
+  "ari_vs_a": null
+}

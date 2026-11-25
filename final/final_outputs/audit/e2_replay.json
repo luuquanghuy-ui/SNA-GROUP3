@@ -1,0 +1,245 @@
+[
+  {
+    "configuration": "scratch",
+    "seed": "42",
+    "n": 7728,
+    "confusion_matrix": [
+      [
+        310,
+        35
+      ],
+      [
+        12,
+        7371
+      ]
+    ],
+    "metrics": {
+      "accuracy": 0.9939182194616977,
+      "macro_f1": 0.9631785973265311,
+      "bad_f1": 0.9295352323838081,
+      "bad_ap": 0.961866771706795
+    },
+    "delta": {
+      "accuracy": 0.0,
+      "macro_f1": 0.0,
+      "bad_f1": 0.0,
+      "bad_ap": -1.1102230246251565e-16
+    }
+  },
+  {
+    "configuration": "transfer",
+    "seed": "42",
+    "n": 7728,
+    "confusion_matrix": [
+      [
+        310,
+        35
+      ],
+      [
+        19,
+        7364
+      ]
+    ],
+    "metrics": {
+      "accuracy": 0.9930124223602484,
+      "macro_f1": 0.9581141070200465,
+      "bad_f1": 0.9198813056379822,
+      "bad_ap": 0.9592941861236745
+    },
+    "delta": {
+      "accuracy": 0.0,
+      "macro_f1": 0.0,
+      "bad_f1": 0.0,
+      "bad_ap": 1.1102230246251565e-16
+    }
+  },
+  {
+    "configuration": "frozen_transfer",
+    "seed": "42",
+    "n": 7728,
+    "confusion_matrix": [
+      [
+        258,
+        87
+      ],
+      [
+        120,
+        7263
+      ]
+    ],
+    "metrics": {
+      "accuracy": 0.9732142857142857,
+      "macro_f1": 0.8498214272135295,
+      "bad_f1": 0.7136929460580913,
+      "bad_ap": 0.7531355438342555
+    },
+    "delta": {
+      "accuracy": 0.0,
+      "macro_f1": 0.0,
+      "bad_f1": 0.0,
+      "bad_ap": 0.0
+    }
+  },
+  {
+    "configuration": "scratch",
+    "seed": "52",
+    "n": 7728,
+    "confusion_matrix": [
+      [
+        312,
+        33
+      ],
+      [
+        25,
+        7358
+      ]
+    ],
+    "metrics": {
+      "accuracy": 0.9924948240165632,
+      "macro_f1": 0.9555150980540832,
+      "bad_f1": 0.9149560117302052,
+      "bad_ap": 0.957590166475674
+    },
+    "delta": {
+      "accuracy": 0.0,
+      "macro_f1": 0.0,
+      "bad_f1": 0.0,
+      "bad_ap": 0.0
+    }
+  },
+  {
+    "configuration": "transfer",
+    "seed": "52",
+    "n": 7728,
+    "confusion_matrix": [
+      [
+        311,
+        34
+      ],
+      [
+        31,
+        7352
+      ]
+    ],
+    "metrics": {
+      "accuracy": 0.9915890269151139,
+      "macro_f1": 0.9504923123230204,
+      "bad_f1": 0.9053857350800583,
+      "bad_ap": 0.9596890950448353
+    },
+    "delta": {
+      "accuracy": 0.0,
+      "macro_f1": 0.0,
+      "bad_f1": 0.0,
+      "bad_ap": -1.9388299155043143e-07
+    }
+  },
+  {
+    "configuration": "frozen_transfer",
+    "seed": "52",
+    "n": 7728,
+    "confusion_matrix": [
+      [
+        274,
+        71
+      ],
+      [
+        119,
+        7264
+      ]
+    ],
+    "metrics": {
+      "accuracy": 0.9754140786749482,
+      "macro_f1": 0.8648190313945536,
+      "bad_f1": 0.7425474254742548,
+      "bad_ap": 0.7948032220365825
+    },
+    "delta": {
+      "accuracy": 0.0,
+      "macro_f1": 0.0,
+      "bad_f1": 0.0,
+      "bad_ap": 0.0
+    }
+  },
+  {
+    "configuration": "scratch",
+    "seed": "62",
+    "n": 7728,
+    "confusion_matrix": [
+      [
+        315,
+        30
+      ],
+      [
+        34,
+        7349
+      ]
+    ],
+    "metrics": {
+      "accuracy": 0.9917184265010351,
+      "macro_f1": 0.9517227619634024,
+      "bad_f1": 0.9077809798270894,
+      "bad_ap": 0.9559233280714273
+    },
+    "delta": {
+      "accuracy": 0.0,
+      "macro_f1": 0.0,
+      "bad_f1": 0.0,
+      "bad_ap": 0.0
+    }
+  },
+  {
+    "configuration": "transfer",
+    "seed": "62",
+    "n": 7728,
+    "confusion_matrix": [
+      [
+        309,
+        36
+      ],
+      [
+        22,
+        7361
+      ]
+    ],
+    "metrics": {
+      "accuracy": 0.9924948240165632,
+      "macro_f1": 0.9551384807552186,
+      "bad_f1": 0.9142011834319527,
+      "bad_ap": 0.9608461052647522
+    },
+    "delta": {
+      "accuracy": 0.0,
+      "macro_f1": 0.0,
+      "bad_f1": 0.0,
+      "bad_ap": 0.0
+    }
+  },
+  {
+    "configuration": "frozen_transfer",
+    "seed": "62",
+    "n": 7728,
+    "confusion_matrix": [
+      [
+        281,
+        64
+      ],
+      [
+        126,
+        7257
+      ]
+    ],
+    "metrics": {
+      "accuracy": 0.9754140786749482,
+      "macro_f1": 0.8672093857801033,
+      "bad_f1": 0.7473404255319149,
+      "bad_ap": 0.8075164986717478
+    },
+    "delta": {
+      "accuracy": 0.0,
+      "macro_f1": 0.0,
+      "bad_f1": 0.0,
+      "bad_ap": -1.1102230246251565e-16
+    }
+  }
+]

@@ -1,0 +1,5 @@
+graph,status,nodes,edges,isolate_rate,communities,weighted_modularity,ari_vs_a
+Graph_A_Baseline,blocked_no_validated_interaction_edges,224685,0,1.0,0,0.0,NA
+Graph_B_Augmented,similarity_only_includes_zero_text,224685,995347,0.05764514765115606,2084,0.19762695938151736,NA
+Graph_B_tweet_mask,similarity_only_valid_tweet,224685,106061,0.8492378218394642,2137,0.8191160384325818,NA
+Graph_B_tweet_mask_retrained_e1,similarity_only_valid_tweet_new_e1,224685,69877,0.876760798451165,2798,0.8758199003724392,NA

@@ -1,0 +1,78 @@
+{
+  "honduras_source_hashes": {
+    "honduras_account_manifest.csv": {
+      "status": "match",
+      "sha256": "21a6ea3726de91471bebc68229a0c2e1ced661b4370552df207aa3f590f7a484",
+      "expected": "21a6ea3726de91471bebc68229a0c2e1ced661b4370552df207aa3f590f7a484",
+      "path": "D:\\mxhui\\nguoi0\\processed-20261018T032211Z-1-001\\processed\\honduras_account_manifest.csv"
+    },
+    "honduras_account_splits.csv": {
+      "status": "match",
+      "sha256": "8f2cea8189746dc8c9d258addd95cbabdf68d59b239bc83b6057e05df77b2e83",
+      "expected": "8f2cea8189746dc8c9d258addd95cbabdf68d59b239bc83b6057e05df77b2e83",
+      "path": "D:\\mxhui\\nguoi0\\processed-20261018T032211Z-1-001\\processed\\honduras_account_splits.csv"
+    },
+    "honduras_train_ids.csv": {
+      "status": "match",
+      "sha256": "ab446d9329e10520a981a92f73906280aa413e8c66244e2e3d65bfe4dc5fd707",
+      "expected": "ab446d9329e10520a981a92f73906280aa413e8c66244e2e3d65bfe4dc5fd707",
+      "path": "D:\\mxhui\\nguoi0\\processed-20261018T032211Z-1-001\\processed\\honduras_train_ids.csv"
+    },
+    "honduras_validation_ids.csv": {
+      "status": "match",
+      "sha256": "c74c2157bbefe62d9f41320d4cc97f6092ed5bc98239c829971d087848e64a3e",
+      "expected": "c74c2157bbefe62d9f41320d4cc97f6092ed5bc98239c829971d087848e64a3e",
+      "path": "D:\\mxhui\\nguoi0\\processed-20261018T032211Z-1-001\\processed\\honduras_validation_ids.csv"
+    },
+    "honduras_test_ids.csv": {
+      "status": "match",
+      "sha256": "68597b9bb144a879865227f07920449662dfb973a4ea24aeb037fdacac201e63",
+      "expected": "68597b9bb144a879865227f07920449662dfb973a4ea24aeb037fdacac201e63",
+      "path": "D:\\mxhui\\nguoi0\\processed-20261018T032211Z-1-001\\processed\\honduras_test_ids.csv"
+    },
+    "honduras_bad_normalized.jsonl": {
+      "status": "match",
+      "sha256": "95c3678bb2741ec683393ae84eb291fbe1a9756236f6b047cdb6b0bc4b1244e6",
+      "expected": "95c3678bb2741ec683393ae84eb291fbe1a9756236f6b047cdb6b0bc4b1244e6",
+      "path": "D:\\mxhui\\nguoi0\\processed-20261018T032211Z-1-001\\processed\\honduras_bad_normalized.jsonl"
+    },
+    "honduras_good_normalized.jsonl": {
+      "status": "match",
+      "sha256": "0d6d9df7daa71a47d6a74edd48f2dbdb025f9985e9245d31f2e1b1e9e1a533fe",
+      "expected": "0d6d9df7daa71a47d6a74edd48f2dbdb025f9985e9245d31f2e1b1e9e1a533fe",
+      "path": "D:\\mxhui\\nguoi0\\processed-20261018T032211Z-1-001\\processed\\honduras_good_normalized.jsonl"
+    },
+    "group_a_exact_duplicate_candidates.csv": {
+      "status": "match",
+      "sha256": "c72d45d2b0844cf25aced213105da0efad534dfe251d10897762c3eba656da3c",
+      "expected": "c72d45d2b0844cf25aced213105da0efad534dfe251d10897762c3eba656da3c",
+      "path": "D:\\mxhui\\nguoi0\\processed-20261018T032211Z-1-001\\processed\\quality_audit\\group_a_exact_duplicate_candidates.csv"
+    },
+    "group_b_metadata_conflicts.csv": {
+      "status": "match",
+      "sha256": "33136182c6b213f63fc8d229486079e605e6d07fca4d5347e7f095a538a084b5",
+      "expected": "33136182c6b213f63fc8d229486079e605e6d07fca4d5347e7f095a538a084b5",
+      "path": "D:\\mxhui\\nguoi0\\processed-20261018T032211Z-1-001\\processed\\quality_audit\\group_b_metadata_conflicts.csv"
+    }
+  },
+  "cross_source_id_check": {
+    "twibot_test_accounts": 1183,
+    "honduras_accounts": 224685,
+    "exact_id_matches": 11,
+    "scope": "E1 test only; E1 train and dev IDs not checked",
+    "e2_split_counts": {
+      "train": {
+        "all": 4,
+        "with_tweet": 2
+      },
+      "validation": {
+        "all": 2,
+        "with_tweet": 2
+      },
+      "test": {
+        "all": 5,
+        "with_tweet": 3
+      }
+    }
+  }
+}
