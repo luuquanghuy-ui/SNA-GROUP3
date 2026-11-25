@@ -2,8 +2,6 @@
 
 Kiểm định trên nhánh final tại commit ccc53ac1b5339832c3676a9e0f2477b432dded5f.
 
-- [Báo cáo Word](report/final_report.docx) và [slide PowerPoint](presentation/final_presentation.pptx).
-- [Phương pháp và EDA](report/methodology.md), [thiết lập thí nghiệm](report/experiments.md), [kết quả và thảo luận](report/results_and_discussion.md), [giới hạn](report/limitations.md).
 - [Bảng E2 bàn giao](tables/e2_comparison.csv), [E2 train lại theo seed](audit/e2_retrained_test_by_seed.csv) và [đối chiếu hai checkpoint E1](audit/e2_e1_checkpoint_comparison.csv).
 - [Bảng E3](tables/e3_comparison.csv) phân biệt Graph A, Graph B bàn giao, Graph B lọc tweet và Graph B lọc tweet dùng checkpoint E1 huấn luyện lại.
 - [Metrics E1 train lại](audit/e1_retrained_test_metrics.json), [kiểm tra đặc trưng](audit/feature_eda.json) và [audit leakage](audit/leakage_sensitivity.json).
